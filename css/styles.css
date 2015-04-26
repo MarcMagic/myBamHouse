@@ -1,0 +1,96 @@
+/*reset*/
+
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-size: 10px;
+	font-family: "Arial";
+	
+}
+
+a{
+	text-decoration: none;
+}
+/*außerhalb vom wrapper*/
+
+html{
+
+}
+body{
+	background-color: #eeeeee;
+}
+
+
+/*Aufteilung*/
+
+#wrapper {
+	width: 900px;
+	margin: 10px auto;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 100px grey;
+}
+
+#top {
+	background-color: #000000;
+	width: 100%;
+	padding: 20px 0px;
+	overflow: hidden;
+	border-bottom: 1px #eeeeee solid;
+}
+
+#logo {
+	margin: 0 0 0 10px;
+}
+
+#topnav nav {
+	clear: both;
+	background-color: #333333;
+}
+#topnav nav ul{margin: 0; padding: 10px 25px 10px 25px; border-bottom: 3px #cccccc solid;}
+#topnav nav li{display:inline;}
+#topnav nav li a{color: #ffffff; padding: 10px 25px 10px 25px;}
+#topnav a:hover {color: #ffffff; background-color: #770000;}
+
+#content {
+	float: left;
+	width: 650px;
+	padding: 20px;
+	background-color: #ffffff;
+}
+#content h1{ margin: 0 0 20px 0; font-size: 32px; border-bottom: 1px #777777 solid; padding: 20px 0;}
+
+div.news {
+	font-size: 20px;
+	padding: 30px 15px;
+	margin-bottom: 25px;
+	background-color: #cccccc;
+}
+
+#rightside{
+	padding: 20px;
+	margin-left: 675px;
+}
+#rightside iframe {width: 196px; height: 110px; margin-bottom: 20px;}
+
+#footer {
+	clear:both;
+	background-color: #000000;
+	padding: 5px 0;
+}
+#footer nav ul li  {color: #ffffff; display:inline;}
+#footer nav li a{color: #ffffff; margin-right: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
