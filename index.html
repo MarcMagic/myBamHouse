@@ -7,6 +7,11 @@
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 	</head>
 	<body>
+	<?php
+		require_once('connect.php');
+		$query = mysql_query("SELECT * FROM  index ORDER BY id DESC");
+		?>
+
 		<div id="wrapper">
 		
 			<div id="top">
@@ -28,43 +33,36 @@
 					</ul>
 				</nav>
 			</div>
-			
-				<div id="content">
-					<h1>Das Neueste aus dem Netz</h1>
-					
-					<div class="news">
-						Die coolsten Bilder von Unges Longboardtour
-					</div>
-					
-					<div class="news">
-						Dafür sitzen die Jungs von ApeCrime in Untersuchungshaft
-					</div>
-					
-					<div class="news">
-						Bibbi schießt den Oberspasten Julian endlich ab
-					</div>
-					
-					<div class="news">
-						Chartplatzierung von Liont veröffentlicht
-					</div>
 
+			<?php
+				while ($row = mysql_fetch_assoc($query)) {
+					$articleid = $row['id'];
+					$headline = $row['headline'];
+					$cool = $row['cool'];
+					$sad = $row['sad'];
+					$enraging = $row['enraging'];
+					$funny = $row['funny'];
+					$hitsquelle = $hitsquelle['hitsquelle'];
 
-
-
+					$comchk = mysql_query("SELECT * from comment WHERE id = '{$articleid}'");
+					$nrcom = mysql_num_rows($comchk);
+			?>
+				<div id="content">	
+					<h1>Das Neueste aus dem Netz</h1>		
+					<?php
+					echo "<a href='news.php?id={$articleid}'><div class='news'>$headline</h1></div>
+					<p><img src='images/cool.png'/><span>$cool</span>
+					<img src='images/sad.png'/><span>$sad</span>
+					<img src='images/enraging.png'/><span>$enraging</span>
+					<img src='images/funny.png'/><span>$funny</span></p>";
+					?>
 				</div>
 			
 			<div id="rightside">
 				<h2>Youtube Hits</h2>
-				
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/HPEeQwbTLT8" frameborder="0" allowfullscreen></iframe>
-				
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/Bfr053KdD6w" frameborder="0" allowfullscreen></iframe>
-				
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/BW-6UFm8gIU" frameborder="0" allowfullscreen></iframe>
-				
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/N-HcOdDZaXA" frameborder="0" allowfullscreen></iframe>
-				
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/lkKjGFOka70" frameborder="0" allowfullscreen></iframe>
+				<?php
+				echo "<iframe width='560' height='315' src=$hitsquelle frameborder='0' allowfullscreen></iframe>";
+				?>
 			</div>
 			
 			<div id="footer">
