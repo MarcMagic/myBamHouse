@@ -30,33 +30,35 @@
 			</div>
 			<div id="content">	
 				<h1>Das Neueste aus dem Netz</h1>		
-				<?php
-				while ($row = mysql_fetch_assoc($query)) {
-					$articleid = $row['id'];
-					$headline = $row['headline'];
-					$cool = $row['cool'];
-					$sad = $row['sad'];
-					$enraging = $row['enraging'];
-					$funny = $row['funny'];
-					$date = $row['date'];
+					
+						<?php
+						while ($row = mysql_fetch_assoc($query)) {
+							$articleid = $row['id'];
+							$headline = $row['headline'];
+							$cool = $row['cool'];
+							$sad = $row['sad'];
+							$enraging = $row['enraging'];
+							$funny = $row['funny'];
+							$date = $row['date'];
 
-					echo "<div class='news'>
-						<a href='news.php?id={$articleid}'>
-							<h1>{$headline}</h1>
-						</a>
-							<p>{$date}</p>
-								<p><img src='images/cool.png'/>
-									<span>{$cool}</span>
-									<img src='images/sad.png'/>
-									<span>{$sad}</span>
-									<img src='images/enraging.png'/>
-									<span>{$enraging}</span>
-									<img src='images/funny.png'/>
-									<span>{$funny}</span>
-								</p>
-						</div>";
-				}
-				?>
+							echo "<div class='news'>
+								<a href='news.php?id={$articleid}'>
+									<h1>{$headline}</h1>
+								</a>
+									<p>{$date}</p>
+										<p><img src='images/cool.png'/>
+											<span>{$cool}</span>
+											<img src='images/sad.png'/>
+											<span>{$sad}</span>
+											<img src='images/enraging.png'/>
+											<span>{$enraging}</span>
+											<img src='images/funny.png'/>
+											<span>{$funny}</span>
+										</p>
+								</div>";
+						}
+						?>
+					
 			</div>
 			
 			<div id="rightside">

@@ -61,22 +61,34 @@ body{
 }
 #content h1{ margin: 0 0 20px 0; font-size: 32px; border-bottom: 1px #777777 solid; padding: 20px 0;}
 
-#textarea {
+#article {
 	padding: 20px;
 	width: 100%;
 }
-#textarea h1{border-bottom: 1px #777777 solid; }
-#textarea ul li {display:inline;}
+#article h1{border-bottom: 1px #777777 solid; margin: 20px;}
+#article ul li  img{display:inline;}
+#article hr{ margin: 0 auto;}
 
-#textarea p{ 
+#date{
+	margin: 20px;
+}
+
+#textcontent{ 
 font-size: 14px;
+padding: 20px;
+}
+
+div.comment{
+	font-size: 12px;
+	padding: 20px;
+	margin: 20px;
 }
 
 div.news {
 	font-size: 20px;
-	padding: 30px 15px;
+	padding: 15px 8px;
 	margin-bottom: 25px;
-	background-color: #cccccc;
+	background-color: #E0E0E0;
 }
 
 #rightside{
@@ -94,7 +106,12 @@ div.news {
 #footer nav li a{color: #ffffff; margin-right: 10px;}
 
 
+/*Footer-Seiten*/
 
+#textarea {
+	padding: 20px;
+	font-size: 12px;
+}
 
 
 

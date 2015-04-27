@@ -47,7 +47,7 @@
 						</nav>
 					</div>
 					
-				<div id="textarea">
+				<div id="article">
 					<h1><?php echo "{$headline}";?></h1>
 					
 					<div id="date"	<p><?php echo "{$date}";?></p></div></br>
@@ -98,7 +98,7 @@
 							$name = $comment['name'];
 							$comment = nl2br($comment['comment']);
 
-							echo "<div class = 'news'><span><b>{$name}</b>:</span></br>
+							echo "<div class = 'comment'><span><b>{$name}</b>:</span></br>
 							<p>{$comment}</p></div>
 							";
 						}
