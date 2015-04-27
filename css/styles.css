@@ -63,6 +63,13 @@ body{
 
 #textarea {
 	padding: 20px;
+	width: 100%;
+}
+#textarea h1{border-bottom: 1px #777777 solid; }
+#textarea ul li {display:inline;}
+
+#textarea p{ 
+font-size: 14px;
 }
 
 div.news {

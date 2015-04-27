@@ -47,32 +47,46 @@
 						</nav>
 					</div>
 					
-				<div id="content">
-					<?php echo "<h1>{$headline}</h1>
-						<p>{$date}</p></br>
-						<div>{$text}
-						</div>";
-					?>
-				<form action = "vote_cool.php" method = "post">
-				    <input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-				        <input name="submit" type="image" value="Cool!" src="/images/cool.png" alt="Cool"/>
-				        <span><?php echo $cool;?></span>
-				</form>
-				<form action = "vote_sad.php" method = "post">
-				    <input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-				        <input name="submit" type="image" value="Sad!" src="/images/sad.png" alt="Sad"/>
-				        <span><?php echo $sad;?></span>
-				</form>
-				<form action = "vote_enraging.php" method = "post">
-				    <input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-				        <input name="submit" type="image" value="Enraging!" src="/images/enraging.png" alt="Enraging"/>
-				        <span><?php echo $enraging;?></span>
-				</form>
-				<form action = "vote_funny.php" method = "post">
-				    <input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-				        <input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny"/>
-				        <span><?php echo $funny;?></span>
-				</form>
+				<div id="textarea">
+					<h1><?php echo "{$headline}";?></h1>
+					
+					<div id="date"	<p><?php echo "{$date}";?></p></div></br>
+					
+					<div id="textcontent"><?php echo "{$text}";?></div>
+				
+					
+					<ul>
+						<li>	<form action = "vote_cool.php" method = "post">
+								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
+									<input name="submit" type="image" value="Cool!" src="/images/cool.png" alt="Cool"/>
+									<span><?php echo $cool;?></span>
+							</form>
+						</li>
+						
+						<li>	
+							<form action = "vote_sad.php" method = "post">
+								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
+									<input name="submit" type="image" value="Sad!" src="/images/sad.png" alt="Sad"/>
+									<span><?php echo $sad;?></span>
+							</form>
+						</li>
+
+						<li>						
+							<form action = "vote_enraging.php" method = "post">
+								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
+									<input name="submit" type="image" value="Enraging!" src="/images/enraging.png" alt="Enraging"/>
+									<span><?php echo $enraging;?></span>
+							</form>
+						</li>
+						
+						<li>							
+							<form action = "vote_funny.php" method = "post">
+								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
+									<input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny"/>
+									<span><?php echo $funny;?></span>
+							</form>
+						</li>
+					</ul>
 
 					<hr>
 
