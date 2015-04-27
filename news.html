@@ -7,6 +7,35 @@
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 	</head>
 	<body>
+	<?php
+
+		require_once('connect.php');
+
+		$id = $_GET['id'];
+
+		$chk = mysql_query("SELECT * from index WHERE id = '{$id}'");
+		$nr = mysql_num_rows($chk);
+
+		if ($nr != 0){
+
+			$query = mysql_query("SELECT * FROM  index ORDER BY id DESC");
+
+			while ($row = mysql_fetch_assoc($chk)) {
+				$articleid = $row['id'];
+				$headline = $row['headline'];
+				$text = nl2br ($row['text']);
+				$bild = $row['bild'];
+				$link = $row['link'];
+				$date = $row['date'];
+				$cool = $row['cool'];
+				$sad = $row['sad'];
+				$enraging = $row['enraging'];
+				$funny = $row['funny']
+
+				$comchk = mysql_query("SELECT * from comment WHERE id = '{$articleid}'");
+				$nrcom = mysql_num_rows($comchk);
+
+		?>
 		<div id="wrapper">
 		
 			<div id="top">
@@ -32,7 +61,16 @@
 			
 			
 			<div id="textarea">
-				<h1>PLATZHALTER FÜR ARTIKELNAME</h1>
+			<?php
+			echo ="<h1>$headline</h1>
+			<p>$date</p>
+			<p>$text</p>
+			<p>$link</p>
+			<p><img src='images/cool.png'/><span>$cool</span>
+			<img src='images/sad.png'/><span>$sad</span>
+			<img src='images/enraging.png'/><span>$enraging</span>
+			<img src='images/funny.png'/><span>$funny</span></p>";
+			?>
 				
 				
 				PLATZHALTER FÜR HTML-CODE EINGABE

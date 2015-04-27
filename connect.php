@@ -1,5 +1,5 @@
 <?php
-$verbindung = mysql_connect ("localhost","U2117902","Wuerzburg912")
+$verbindung = mysql_connect ("rdbms.strato.de","U2117902","Wuerzburg912")
 or die ("keine Verbindung möglich.
  Benutzername oder Passwort sind falsch");
 

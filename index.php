@@ -1,32 +1,31 @@
-﻿<!DOCTYPE HTML>
-
+﻿<!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>BamHouse</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 	</head>
 	<body>
 	<?php
 		require_once('connect.php');
+
 		$query = mysql_query("SELECT * FROM index ORDER BY id DESC");
 	?>
 
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<img src="images/logos2.jpg" />
+					<img src="images/funny.jpg" />
 				</div>	
 			</div>
 			
 			<div id="topnav">
 				<nav>
 					<ul>
-						<li><a href="index.html">STARTSEITE</a></li>
-						<li><a href="index.html">SEITE 2</a></li>
-						<li><a href="index.html">SEITE 3</a></li>
-						<li><a href="index.html">SEITE 4</a></li>
-						<li><a href="index.html">SEITE 5</a></li>
+						<li><a href="index.php">STARTSEITE</a></li>
+						<li><a href="index.php">SEITE 2</a></li>
+						<li><a href="index.php">SEITE 3</a></li>
+						<li><a href="index.php">SEITE 4</a></li>
+						<li><a href="index.php">SEITE 5</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -39,26 +38,33 @@
 					$sad = $row['sad'];
 					$enraging = $row['enraging'];
 					$funny = $row['funny'];
-					$hitsquelle = $hitsquelle['hitsquelle'];
+					$hitsquelle = $row['hitsquelle'];
 					$comchk = mysql_query("SELECT * from comment WHERE newsid = '{$articleid}'");
 					$nrcom = mysql_num_rows($comchk);
 			?>
 			<div id="content">	
 				<h1>Das Neueste aus dem Netz</h1>		
 				<?php
-					echo "
-					<div><a href='news.php?id={$articleid}'>
-							<div class='news'>$headline
+					echo "<div class='news'>
+						<a href='news.php?id={$articleid}'>
+							<div>$headline</div>
 						</a>
-							<p>
-								<img src='images/cool.png'/><span>$cool</span>
-								<img src='images/sad.png'/><span>$sad</span>
-								<img src='images/enraging.png'/><span>$enraging</span>
-								<img src='images/funny.png'/><span>$funny</span>
+							<p><img src='images/cool.png'/>
+								<span>$cool</span>
+								<img src='images/sad.png'/>
+								<span>$sad</span>
+								<img src='images/enraging.png'/>
+								<span>$enraging</span>
+								<img src='images/funny.png'/>
+								<span>$funny</span>
 							</p>
-					</div>";
+						</div>";
 				?>
 			</div>
+
+			<?php
+			}
+			?>
 			
 			<div id="rightside">
 				<h2>Youtube Hits</h2>
