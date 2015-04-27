@@ -66,8 +66,8 @@ body{
 	width: 100%;
 }
 #article h1{border-bottom: 1px #777777 solid; margin: 20px;}
-#article ul li  img{display:inline;}
-#article hr{ margin: 0 auto;}
+
+
 
 #date{
 	margin: 20px;
@@ -78,18 +78,34 @@ font-size: 14px;
 padding: 20px;
 }
 
+#smileyarea{
+	margin: 20px;
+}
+
+form.smiley {
+	float: left;
+	margin: 5px;
+
+}
+
+#commentarea{
+	margin: 20px;
+}
+
 div.comment{
 	font-size: 12px;
 	padding: 20px;
 	margin: 20px;
 }
 
-div.news {
+div.news  {
 	font-size: 20px;
+	color: #000000;
 	padding: 15px 8px;
-	margin-bottom: 25px;
-	background-color: #E0E0E0;
+	margin: 35px 0;
+	border-bottom: 1px solid #000000;
 }
+div.news h2 {font-size: 20px; color:#000000;}
 
 #rightside{
 	padding: 20px;

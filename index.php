@@ -43,7 +43,7 @@
 
 							echo "<div class='news'>
 								<a href='news.php?id={$articleid}'>
-									<h1>{$headline}</h1>
+									<h2>{$headline}</h2>
 								</a>
 									<p>{$date}</p>
 										<p><img src='images/cool.png'/>

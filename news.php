@@ -54,43 +54,40 @@
 					
 					<div id="textcontent"><?php echo "{$text}";?></div>
 				
+				</div>	
+				
+				<div id="smileyarea">
 					
-					<ul>
-						<li>	<form action = "vote_cool.php" method = "post">
+							<form class="smiley" action = "vote_cool.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Cool!" src="/images/cool.png" alt="Cool"/>
 									<span><?php echo $cool;?></span>
 							</form>
-						</li>
 						
-						<li>	
-							<form action = "vote_sad.php" method = "post">
+							<form class="smiley" action = "vote_sad.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Sad!" src="/images/sad.png" alt="Sad"/>
 									<span><?php echo $sad;?></span>
 							</form>
-						</li>
 
-						<li>						
-							<form action = "vote_enraging.php" method = "post">
+												
+							<form class="smiley" action = "vote_enraging.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Enraging!" src="/images/enraging.png" alt="Enraging"/>
 									<span><?php echo $enraging;?></span>
 							</form>
-						</li>
 						
-						<li>							
-							<form action = "vote_funny.php" method = "post">
+							<form class="smiley" action = "vote_funny.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny"/>
 									<span><?php echo $funny;?></span>
 							</form>
-						</li>
-					</ul>
+				</div>
+					<br><br>	
 
 					<hr>
 
-					<div>
+					<div id="commentarea">
 		    			<h2>Kommentare</h2></br>
 		    			<?php
 	    				$comchk = mysql_query("SELECT * FROM `comment` WHERE newsid = '{$articleid}' ORDER BY id DESC");
@@ -117,7 +114,7 @@
 	    					<input name="submit" type="submit" value="Post"/>
 	    				</form></br>
 	    			</div>
-		    	</div>
+		    	
 				
 				<div id="footer">
 					<nav>
