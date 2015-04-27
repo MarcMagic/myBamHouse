@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>BamHouse</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -39,21 +38,22 @@
 					$sad = $row['sad'];
 					$enraging = $row['enraging'];
 					$funny = $row['funny'];
-					$hitsquelle = $row['hitsquelle'];
+					$date = $row['date'];
 
 					echo "<div class='news'>
 						<a href='news.php?id={$articleid}'>
-							<div>{$headline}</div>
+							<h1>{$headline}</h1>
 						</a>
-							<p><img src='images/cool.png'/>
-								<span>{$cool}</span>
-								<img src='images/sad.png'/>
-								<span>{$sad}</span>
-								<img src='images/enraging.png'/>
-								<span>{$enraging}</span>
-								<img src='images/funny.png'/>
-								<span>{$funny}</span>
-							</p>
+							<p>{$date}</p>
+								<p><img src='images/cool.png'/>
+									<span>{$cool}</span>
+									<img src='images/sad.png'/>
+									<span>{$sad}</span>
+									<img src='images/enraging.png'/>
+									<span>{$enraging}</span>
+									<img src='images/funny.png'/>
+									<span>{$funny}</span>
+								</p>
 						</div>";
 				}
 				?>

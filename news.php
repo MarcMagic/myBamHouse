@@ -10,12 +10,11 @@
 		if ($nr != 0){
 
 			$query = mysql_query("SELECT * FROM  `index` ORDER BY id DESC");
+			mysql_query("SET NAMES 'utf8'");
 			while ($row = mysql_fetch_assoc($chk)) {
 					$articleid = $row['id'];
 					$headline = $row['headline'];
 					$text = nl2br ($row['text']);
-					$bild = $row['bild'];
-					$link = $row['link'];
 					$date = $row['date'];
 					$cool = $row['cool'];
 					$sad = $row['sad'];
@@ -23,7 +22,6 @@
 					$funny = $row['funny']
 	?>
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title><?php echo "{$headline}";?></title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -52,9 +50,7 @@
 				<div id="content">
 					<?php echo "<h1>{$headline}</h1>
 						<p>{$date}</p></br>
-						<image src='images/{$bild}'/>
 						<div>{$text}
-							{$link}
 						</div>";
 					?>
 				<form action = "vote_cool.php" method = "post">
@@ -75,7 +71,7 @@
 				<form action = "vote_funny.php" method = "post">
 				    <input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 				        <input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny"/>
-				        <span><?php echo $enraging;?></span>
+				        <span><?php echo $funny;?></span>
 				</form>
 
 					<hr>
@@ -83,12 +79,12 @@
 					<div>
 		    			<h2>Kommentare</h2></br>
 		    			<?php
-	    				$comchk = mysql_query("SELECT * FROM `comment` WHERE newsid = '{$articleid}'");
+	    				$comchk = mysql_query("SELECT * FROM `comment` WHERE newsid = '{$articleid}' ORDER BY id DESC");
 	    				while ($comment = mysql_fetch_assoc($comchk)) {
 							$name = $comment['name'];
 							$comment = nl2br($comment['comment']);
 
-							echo "<div class = 'news'><span><b>{$name}</b> schrieb:</span></br>
+							echo "<div class = 'news'><span><b>{$name}</b>:</span></br>
 							<p>{$comment}</p></div>
 							";
 						}
@@ -106,6 +102,7 @@
 	    					</table>
 	    					<input name="submit" type="submit" value="Post"/>
 	    				</form></br>
+	    			</div>
 		    	</div>
 				
 				<div id="footer">

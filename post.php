@@ -8,7 +8,9 @@ if (isset($_POST['submit'])) {
 
 		if ($name != "" && $comment != "") {
 			$name = htmlspecialchars($name);
+			$name = htmlentities($name);
 			$comment = htmlspecialchars($comment);
+			$comment = htmlentities($comment);
 
 			$query = mysql_query("INSERT INTO `comment` VALUES ('', '{$newsid}', '{$name}', '{$comment}')");
 				$hosts = $_SERVER['HTTP_HOST'];
