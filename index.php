@@ -1,20 +1,28 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 <html>
 	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>BamHouse</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 	</head>
 	<body>
 	<?php
 		require_once('connect.php');
-
 		$query = mysql_query("SELECT * FROM index ORDER BY id DESC");
+		while ($row = mysql_fetch_assoc($query)) {
+					$articleid = $row['id'];
+					$headline = $row['headline'];
+					$cool = $row['cool'];
+					$sad = $row['sad'];
+					$enraging = $row['enraging'];
+					$funny = $row['funny'];
+					$hitsquelle = $row['hitsquelle'];
 	?>
 
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<img src="images/funny.jpg" />
+					<img src="images/Logos2.jpg" />
 				</div>	
 			</div>
 			
@@ -30,18 +38,6 @@
 				</nav>
 			</div>
 
-			<?php
-				while ($row = mysql_fetch_assoc($query)) {
-					$articleid = $row['id'];
-					$headline = $row['headline'];
-					$cool = $row['cool'];
-					$sad = $row['sad'];
-					$enraging = $row['enraging'];
-					$funny = $row['funny'];
-					$hitsquelle = $row['hitsquelle'];
-					$comchk = mysql_query("SELECT * from comment WHERE newsid = '{$articleid}'");
-					$nrcom = mysql_num_rows($comchk);
-			?>
 			<div id="content">	
 				<h1>Das Neueste aus dem Netz</h1>		
 				<?php
@@ -61,10 +57,6 @@
 						</div>";
 				?>
 			</div>
-
-			<?php
-			}
-			?>
 			
 			<div id="rightside">
 				<h2>Youtube Hits</h2>
@@ -83,9 +75,9 @@
 					</ul>
 				</nav>
 			</div>
-			
 		</div>
-		
+		<?php
+		}
+		?>
 	</body>
-
 </html>
