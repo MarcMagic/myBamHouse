@@ -1,24 +1,16 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>BamHouse</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 	</head>
 	<body>
 	<?php
 		require_once('connect.php');
-		$query = mysql_query("SELECT * FROM index ORDER BY id DESC");
-		while ($row = mysql_fetch_assoc($query)) {
-					$articleid = $row['id'];
-					$headline = $row['headline'];
-					$cool = $row['cool'];
-					$sad = $row['sad'];
-					$enraging = $row['enraging'];
-					$funny = $row['funny'];
-					$hitsquelle = $row['hitsquelle'];
+		$query = mysql_query("SELECT id, headline, cool, sad, enraging, funny FROM `index` ORDER BY id DESC");
 	?>
-
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
@@ -37,31 +29,45 @@
 					</ul>
 				</nav>
 			</div>
-
 			<div id="content">	
 				<h1>Das Neueste aus dem Netz</h1>		
 				<?php
+				while ($row = mysql_fetch_assoc($query)) {
+					$articleid = $row['id'];
+					$headline = $row['headline'];
+					$cool = $row['cool'];
+					$sad = $row['sad'];
+					$enraging = $row['enraging'];
+					$funny = $row['funny'];
+					$hitsquelle = $row['hitsquelle'];
+
 					echo "<div class='news'>
 						<a href='news.php?id={$articleid}'>
-							<div>$headline</div>
+							<div>{$headline}</div>
 						</a>
 							<p><img src='images/cool.png'/>
-								<span>$cool</span>
+								<span>{$cool}</span>
 								<img src='images/sad.png'/>
-								<span>$sad</span>
+								<span>{$sad}</span>
 								<img src='images/enraging.png'/>
-								<span>$enraging</span>
+								<span>{$enraging}</span>
 								<img src='images/funny.png'/>
-								<span>$funny</span>
+								<span>{$funny}</span>
 							</p>
 						</div>";
+				}
+				echo 'MYSQL-Fehler: '.mysql_error();
 				?>
 			</div>
 			
 			<div id="rightside">
 				<h2>Youtube Hits</h2>
 				<?php
-				echo "<iframe width='560' height='315' src='$hitsquelle' frameborder='0' allowfullscreen></iframe>";
+				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC");
+				while ($row = mysql_fetch_assoc($result)) {
+					$hitsquelle = $row['hitsquelle'];
+				echo "<iframe width='560' height='315' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
+				}
 				?>
 			</div>
 			
@@ -76,8 +82,5 @@
 				</nav>
 			</div>
 		</div>
-		<?php
-		}
-		?>
 	</body>
 </html>

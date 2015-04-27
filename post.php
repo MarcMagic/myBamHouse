@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
 			$comment = htmlspecialchars($comment);
 			$comment = htmlentities($comment);
 
-			$query = mysql_query("INSERT INTO comment VALUES('', '{$newsnid}', '{$name}', '{$comment}')");
+			$query = mysql_query("INSERT INTO `comment` VALUES('', '{$newsnid}', '{$name}', '{$comment}')");
 				$hosts = $_SERVER['HTTP_HOST'];
 				$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 				$extras = "news.php?id={$newsid}&com=1";
