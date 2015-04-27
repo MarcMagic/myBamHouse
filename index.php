@@ -56,7 +56,6 @@
 							</p>
 						</div>";
 				}
-				echo 'MYSQL-Fehler: '.mysql_error();
 				?>
 			</div>
 			

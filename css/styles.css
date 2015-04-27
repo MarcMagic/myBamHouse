@@ -61,6 +61,10 @@ body{
 }
 #content h1{ margin: 0 0 20px 0; font-size: 32px; border-bottom: 1px #777777 solid; padding: 20px 0;}
 
+#textarea {
+	padding: 20px;
+}
+
 div.news {
 	font-size: 20px;
 	padding: 30px 15px;
