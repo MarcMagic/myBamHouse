@@ -3,7 +3,7 @@
 	<head>
 		<title>BamHouse</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 	<?php
@@ -13,7 +13,7 @@
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<img src="images/Logos2.jpg" />
+					<img src="images/BH_Logo.png" id="logo_image" />
 				</div>	
 			</div>
 			
@@ -46,13 +46,13 @@
 									<h2>{$headline}</h2>
 								</a>
 									<p>{$date}</p>
-										<p><img src='images/cool.png'/>
+										<p><img class='preview_image' src='images/cool.png'/>
 											<span>{$cool}</span>
-											<img src='images/sad.png'/>
+											<img class='preview_image' src='images/sad.png'/>
 											<span>{$sad}</span>
-											<img src='images/enraging.png'/>
+											<img class='preview_image' src='images/enraging.png'/>
 											<span>{$enraging}</span>
-											<img src='images/funny.png'/>
+											<img class='preview_image' src='images/funny.png'/>
 											<span>{$funny}</span>
 										</p>
 								</div>";

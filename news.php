@@ -24,14 +24,14 @@
 	<head>
 		<title><?php echo "{$headline}";?></title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 	
 				<div id="wrapper">
 					<div id="top">	
 						<div id="logo">
-							<img src="images/Logos2.jpg" />
+							<img src="images/BH_Logo.png" id="logo_image" />
 						</div>
 					</div>
 					
@@ -50,37 +50,38 @@
 				<div id="article">
 					<h1><?php echo "{$headline}";?></h1>
 					
-					<div id="date"	<p><?php echo "{$date}";?></p></div></br>
+					<div id="date"><?php echo "{$date}";?></div>
 					
 					<div id="textcontent"><?php echo "{$text}";?></div>
 				
 				</div>	
 				
+				<div id="frage">Wie findest du das?</div>
 				<div id="smileyarea">
 					
 							<form class="smiley" action = "vote_cool.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-									<input name="submit" type="image" value="Cool!" src="/images/cool.png" alt="Cool"/>
-									<span><?php echo $cool;?></span>
+									<input name="submit" type="image" value="Cool!" src="/images/cool.png" alt="Cool" class="vote_image"/>
+									<span>Cool <?php echo $cool;?></span>
 							</form>
 						
 							<form class="smiley" action = "vote_sad.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-									<input name="submit" type="image" value="Sad!" src="/images/sad.png" alt="Sad"/>
-									<span><?php echo $sad;?></span>
+									<input name="submit" type="image" value="Sad!" src="/images/sad.png" alt="Sad" class="vote_image"/>
+									<span>Traurig <?php echo $sad;?></span>
 							</form>
 
 												
 							<form class="smiley" action = "vote_enraging.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-									<input name="submit" type="image" value="Enraging!" src="/images/enraging.png" alt="Enraging"/>
-									<span><?php echo $enraging;?></span>
+									<input name="submit" type="image" value="Enraging!" src="/images/enraging.png" alt="Enraging" class="vote_image"/>
+									<span>Ver&auml;rgernd <?php echo $enraging;?></span>
 							</form>
 						
 							<form class="smiley" action = "vote_funny.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-									<input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny"/>
-									<span><?php echo $funny;?></span>
+									<input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny" class="vote_image"/>
+									<span>Lustig <?php echo $funny;?></span>
 							</form>
 				</div>
 					<br><br>	

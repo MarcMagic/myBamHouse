@@ -5,9 +5,8 @@ html, body {
 	padding: 0;
 	border: 0;
 	background: transparent;
-	font-size: 10px;
-	font-family: "Arial";
-	
+	font-size: 12px;
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 
 a{
@@ -33,7 +32,7 @@ body{
 }
 
 #top {
-	background-color: #000000;
+	background-color: #f5f6f5;
 	width: 100%;
 	padding: 20px 0px;
 	overflow: hidden;
@@ -44,14 +43,19 @@ body{
 	margin: 0 0 0 10px;
 }
 
+#logo_image {
+	height: 75px;
+}
+
 #topnav nav {
 	clear: both;
-	background-color: #333333;
+	background-color: #8ab0b6;
+	font-size: 16px;
 }
 #topnav nav ul{margin: 0; padding: 10px 25px 10px 25px; border-bottom: 3px #cccccc solid;}
 #topnav nav li{display:inline;}
 #topnav nav li a{color: #ffffff; padding: 10px 25px 10px 25px;}
-#topnav a:hover {color: #ffffff; background-color: #770000;}
+#topnav a:hover {color: #ffffff; background-color: #547f86;}
 
 #content {
 	float: left;
@@ -59,13 +63,13 @@ body{
 	padding: 20px;
 	background-color: #ffffff;
 }
-#content h1{ margin: 0 0 20px 0; font-size: 32px; border-bottom: 1px #777777 solid; padding: 20px 0;}
+#content h1{ margin: 0 0 20px 0; font-size: 40px; border-bottom: 1px #777777 solid; padding: 20px 0; font-weight: normal;}
 
 #article {
 	padding: 20px;
 	width: 100%;
 }
-#article h1{border-bottom: 1px #777777 solid; margin: 20px;}
+#article h1{border-bottom: 1px #777777 solid; margin: 20px; font-weight: normal;}
 
 
 
@@ -74,38 +78,59 @@ body{
 }
 
 #textcontent{ 
-font-size: 14px;
+font-size: 16px;
 padding: 20px;
 }
 
+#frage {
+	font-size: 20px;
+	padding: 20px;
+}
+
 #smileyarea{
-	margin: 20px;
+	margin: 10px;
 }
 
 form.smiley {
 	float: left;
-	margin: 5px;
+	margin: 10px;
 
+}
+
+.vote_image {
+	width: 48px;
+	height: 48px;
+}
+
+.preview_image {
+	width: 24px;
+	height: 24px;
 }
 
 #commentarea{
 	margin: 20px;
+	clear: both;
+}
+
+#commentarea h2 {
+	font-weight: normal;
+	font-size: 32px;
 }
 
 div.comment{
-	font-size: 12px;
+	font-size: 16px;
 	padding: 20px;
 	margin: 20px;
 }
 
 div.news  {
-	font-size: 20px;
+	font-size: 24px;
 	color: #000000;
 	padding: 15px 8px;
 	margin: 35px 0;
 	border-bottom: 1px solid #000000;
 }
-div.news h2 {font-size: 20px; color:#000000;}
+div.news h2 {font-size: 24px; color:#000000; font-weight: normal;}
 
 #rightside{
 	padding: 20px;
@@ -115,20 +140,20 @@ div.news h2 {font-size: 20px; color:#000000;}
 
 #footer {
 	clear:both;
-	background-color: #000000;
+	background-color: #f5f6f5;
 	padding: 5px 0;
+	font-size: 14px;
 }
-#footer nav ul li  {color: #ffffff; display:inline;}
-#footer nav li a{color: #ffffff; margin-right: 10px;}
+#footer nav ul li  {color: #547f86; display:inline;}
+#footer nav li a{color: #547f86; margin-right: 10px;}
 
 
 /*Footer-Seiten*/
 
 #textarea {
 	padding: 20px;
-	font-size: 12px;
+	font-size: 14px;
 }
-
 
 
 
