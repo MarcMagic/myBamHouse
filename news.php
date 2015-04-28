@@ -62,34 +62,37 @@
 							<form class="smiley" action = "vote_cool.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Cool!" src="/images/cool.png" alt="Cool" class="vote_image"/>
-									<span>Cool <?php echo $cool;?></span>
+									<span class="counter"><?php echo $cool;?></span><br>
+									<span class="smileyunterschrift">Cool</span>
 							</form>
 						
 							<form class="smiley" action = "vote_sad.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Sad!" src="/images/sad.png" alt="Sad" class="vote_image"/>
-									<span>Traurig <?php echo $sad;?></span>
+									<span class="counter"><?php echo $sad;?></span><br>
+									<span class="smileyunterschrift">Traurig</span>
 							</form>
 
 												
 							<form class="smiley" action = "vote_enraging.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Enraging!" src="/images/enraging.png" alt="Enraging" class="vote_image"/>
-									<span>Ver&auml;rgernd <?php echo $enraging;?></span>
+									<span class="counter"><?php echo $enraging;?></span><br>
+									<span class="smileyunterschrift">Ver&auml;rgernd</span>
 							</form>
 						
 							<form class="smiley" action = "vote_funny.php" method = "post">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny" class="vote_image"/>
-									<span>Lustig <?php echo $funny;?></span>
+									<span class="counter"><?php echo $funny;?></span><br>
+									<span class="smileyunterschrift">Lustig</span>
 							</form>
 				</div>
-					<br><br>	
 
 					<hr>
 
 					<div id="commentarea">
-		    			<h2>Kommentare</h2></br>
+		    			<h2>Kommentare</h2>
 		    			<?php
 	    				$comchk = mysql_query("SELECT * FROM `comment` WHERE newsid = '{$articleid}' ORDER BY id DESC");
 	    				while ($comment = mysql_fetch_assoc($comchk)) {
@@ -97,22 +100,22 @@
 							$comment = nl2br($comment['comment']);
 
 							echo "<div class = 'comment'><span><b>{$name}</b>:</span></br>
-							<p>{$comment}</p></div>
+							<p id='commenttext'>{$comment}</p></div>
 							";
 						}
 	    				?>
-	    				<form action = "post.php" method = "post">
+	    				<form id= "commentform" action = "post.php" method = "post">
 							<table>
 								<tr>
-									<td>Name: </td><td><input type="text" name="name"/>
+									<td>Name: </td><td><input type="text" name="name" size="50" style="width: 200px;"/>
 									<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									</td>
 	    						</tr>
 	    						<tr>
-	    							<td>Kommentar: </td><td><textarea cols= "35" rows = "10" name="comment"></textarea></td>
+	    							<td>Kommentar: </td><td><textarea cols= "50" rows = "8" name="comment"></textarea></td>
 	    						</tr>
 	    					</table>
-	    					<input name="submit" type="submit" value="Post"/>
+	    					<input class="button" name="submit" type="submit" value="Kommentieren"/>
 	    				</form></br>
 	    			</div>
 		    	
