@@ -8,7 +8,7 @@
 	<body>
 	<?php
 		require_once('connect.php');
-		$query = mysql_query("SELECT id, headline, cool, sad, enraging, funny FROM `index` ORDER BY id DESC");
+		$query = mysql_query("SELECT id, headline, cool, sad, enraging, funny FROM `index` ORDER BY id DESC LIMIT 10");
 	?>
 		<div id="wrapper">
 			<div id="top">
@@ -64,7 +64,7 @@
 			<div id="rightside">
 				<h2>Youtube Hits</h2>
 				<?php
-				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC");
+				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 5");
 				while ($row = mysql_fetch_assoc($result)) {
 					$hitsquelle = $row['hitsquelle'];
 				echo "<iframe width='560' height='315' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
