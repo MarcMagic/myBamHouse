@@ -3,7 +3,7 @@ include "connect.php";
 mysql_query("SET NAMES 'utf8'");
 if(isSet($_POST['getLastContentId'])) {
 	$getLastContentId=$_POST['getLastContentId'];
-	$result=mysql_query("SELECT * FROM `index` WHERE id <'$getLastContentId' ORDER BY id DESC LIMIT 10");
+	$result=mysql_query("SELECT * FROM `index` WHERE funny <'$getLastContentId' ORDER BY funny DESC LIMIT 10");
 	$count=mysql_num_rows($result);
 	if($count>0){
 		while($row=mysql_fetch_array($result)) {
@@ -32,8 +32,8 @@ if(isSet($_POST['getLastContentId'])) {
 		}
 		?>
  
-		<a href="#"><div id="load_more_<?php echo $id; ?>" class="more_tab">
-		<div id="<?php echo $id; ?>" class="more_button">Mehr Neuigkeiten laden</div></a>
+		<a href="#"><div id="load_more_<?php echo $funny; ?>" class="more_tab">
+		<div funny="<?php echo $funny; ?>" class="more_button">Mehr Neuigkeiten laden</div></a>
 		</div>
  
 	<?php

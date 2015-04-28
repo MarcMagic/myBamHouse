@@ -1,9 +1,9 @@
 <?php
 include "connect.php";
- 
+mysql_query("SET NAMES 'utf8'");
 if(isSet($_POST['getLastContentId'])) {
 	$getLastContentId=$_POST['getLastContentId'];
-	$result=mysql_query("SELECT * FROM `index` WHERE cool <='.$getLastContentId.' ORDER BY cool DESC LIMIT 10");
+	$result=mysql_query("SELECT * FROM `index` WHERE cool <'$getLastContentId' ORDER BY cool DESC LIMIT 10");
 	$count=mysql_num_rows($result);
 	if($count>0){
 		while($row=mysql_fetch_array($result)) {
@@ -14,7 +14,7 @@ if(isSet($_POST['getLastContentId'])) {
 			$enraging = $row['enraging'];
 			$funny = $row['funny'];
 			$date = $row['date'];
-			echo "
+			echo "<div class='news'>
 			<div id='indexdate'>{$date}</div>
 			<a href='news.php?id={$id}'>
 				<h2>{$headline}</h2>
@@ -27,18 +27,19 @@ if(isSet($_POST['getLastContentId'])) {
 					<span>{$enraging}</span>
 					<img class='preview_image' src='images/funny.png'/>
 					<span>{$funny}</span>
-				</div>";
+				</div>
+			</div>";
 		}
 		?>
  
 		<a href="#"><div id="load_more_<?php echo $cool; ?>" class="more_tab">
-		<div id="<?php echo $cool; ?>" class="more_button">Load More Content</div></a>
+		<div cool="<?php echo $cool; ?>" class="more_button">Mehr Neuigkeiten laden</div></a>
 		</div>
  
 	<?php
 	}
 	else{
-		echo "<div class='all_loaded'>No More Content to Load</div>";
+		echo "<div class='all_loaded'>Es gibt keine Neuigkeiten mehr</div>";
 	}
 }
 ?>

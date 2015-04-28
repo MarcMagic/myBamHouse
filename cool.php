@@ -29,19 +29,6 @@
 				});
 			});
 		</script>
-		<style>
-		.more_button {
-		    background: none repeat scroll 0 0 #FFFFFF;
-		    border: 1px solid #CCCCCC;
-		    border-radius: 5px;
-		    color: #000;
-		    font-weight: bold;
-		    height: auto;
-		    line-height: 32px;
-		    text-align: center;
-		    text-transform: none;
-		}
-		</style>
 	</head>
 
 	<body>
@@ -69,7 +56,7 @@
 			</div>
 			<div id="content">	
 				<h1>Das Neueste aus dem Netz</h1>		
-						<div class='news' id = 'newsdiv'>
+						<div id = 'newsdiv'>
 						<?php
 						while ($row = mysql_fetch_assoc($query)) {
 							$id = $row['id'];
@@ -80,7 +67,8 @@
 							$funny = $row['funny'];
 							$date = $row['date'];
 
-							echo "<div id='indexdate'>{$date}</div>
+							echo "<div class='news'>
+									<div id='indexdate'>{$date}</div>
 									<a href='news.php?id={$id}'>
 										<h2>{$headline}</h2>
 									</a>
@@ -92,12 +80,13 @@
 												<span>{$enraging}</span>
 												<img class='preview_image' src='images/funny.png'/>
 												<span>{$funny}</span>
-											</div>";
+											</div>
+									</div>";
 							}?>				
 						</div>
 							<div class="more_div">
 								<a href="#"><div id="load_more_<?php echo $cool; ?>" class="more_tab">
-									<div class="more_button" id="<?php echo $cool; ?>">Load More Content</div>
+									<div class="more_button" cool="<?php echo $cool; ?>">Mehr Neuigkeiten laden</div>
 								</a></div>
 							</div>
 			</div>

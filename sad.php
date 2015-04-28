@@ -4,7 +4,33 @@
 		<title>BamHouse</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.more_button').live("click",function() {
+					var getId = $(this).attr("sad");
+					if (getId) {
+						$("#load_more_"+getId).html('<img src="images/load_img.gif" style="padding: 10px 0 0 100px"/>');
+						$.ajax({
+							type: "POST",
+							url: "more_content_sad.php",
+							data: "getLastContentId="+ getId, 
+							cache: false,
+							success: function(html){
+								$("div#newsdiv").append(html);
+								$("#load_more_"+getId).remove();
+							}
+						});
+					}
+					else {
+						$(".more_tab").html('The End');
+					}
+				return false;
+				});
+			});
+		</script>
 	</head>
+
 	<body>
 	<?php
 		require_once('connect.php');
@@ -30,10 +56,10 @@
 			</div>
 			<div id="content">	
 				<h1>Das Neueste aus dem Netz</h1>		
-					
+						<div id = 'newsdiv'>
 						<?php
 						while ($row = mysql_fetch_assoc($query)) {
-							$articleid = $row['id'];
+							$id = $row['id'];
 							$headline = $row['headline'];
 							$cool = $row['cool'];
 							$sad = $row['sad'];
@@ -43,7 +69,7 @@
 
 							echo "<div class='news'>
 									<div id='indexdate'>{$date}</div>
-									<a href='news.php?id={$articleid}'>
+									<a href='news.php?id={$id}'>
 										<h2>{$headline}</h2>
 									</a>
 											<div id='indexsmileyarea'><img class='preview_image' src='images/cool.png'/>
@@ -55,10 +81,14 @@
 												<img class='preview_image' src='images/funny.png'/>
 												<span>{$funny}</span>
 											</div>
-								</div>";
-						}
-						?>
-					
+									</div>";
+							}?>				
+						</div>
+							<div class="more_div">
+								<a href="#"><div id="load_more_<?php echo $sad; ?>" class="more_tab">
+									<div class="more_button" sad="<?php echo $sad; ?>">Mehr Neuigkeiten laden</div>
+								</a></div>
+							</div>
 			</div>
 			
 			<div id="footer">

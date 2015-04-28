@@ -39,10 +39,10 @@
 						<nav>
 							<ul>
 								<li><a href="index.php">STARTSEITE</a></li>
-								<li><a href="index.php">SEITE 2</a></li>
-								<li><a href="index.php">SEITE 3</a></li>
-								<li><a href="index.php">SEITE 4</a></li>
-								<li><a href="index.php">SEITE 5</a></li>
+								<li><a href="cool.php">Cool</a></li>
+								<li><a href="sad.php">Traurig</a></li>
+								<li><a href="enraging.php">Ver&auml;rgend</a></li>
+								<li><a href="funny.php">Lustig</a></li>
 							</ul>
 						</nav>
 					</div>

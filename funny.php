@@ -8,12 +8,12 @@
 		<script type="text/javascript">
 			$(function() {
 				$('.more_button').live("click",function() {
-					var getId = $(this).attr("enraging");
+					var getId = $(this).attr("funny");
 					if (getId) {
 						$("#load_more_"+getId).html('<img src="images/load_img.gif" style="padding: 10px 0 0 100px"/>');
 						$.ajax({
 							type: "POST",
-							url: "more_content_enraging.php",
+							url: "more_content_funny.php",
 							data: "getLastContentId="+ getId, 
 							cache: false,
 							success: function(html){
@@ -34,7 +34,7 @@
 	<body>
 	<?php
 		require_once('connect.php');
-		$query = mysql_query("SELECT * FROM `index` ORDER BY enraging DESC LIMIT 10");
+		$query = mysql_query("SELECT * FROM `index` ORDER BY funny DESC LIMIT 10");
 	?>
 		<div id="wrapper">
 			<div id="top">
@@ -85,8 +85,8 @@
 							}?>				
 						</div>
 							<div class="more_div">
-								<a href="#"><div id="load_more_<?php echo $enraging; ?>" class="more_tab">
-									<div class="more_button" enraging="<?php echo $enraging; ?>">Mehr Neuigkeiten laden</div>
+								<a href="#"><div id="load_more_<?php echo $funny; ?>" class="more_tab">
+									<div class="more_button" funny="<?php echo $funny; ?>">Mehr Neuigkeiten laden</div>
 								</a></div>
 							</div>
 			</div>
