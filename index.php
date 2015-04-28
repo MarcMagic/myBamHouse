@@ -48,10 +48,10 @@
 				<nav>
 					<ul>
 						<li><a href="index.php">STARTSEITE</a></li>
-						<li><a href="cool.php">Cool</a></li>
-						<li><a href="sad.php">Traurig</a></li>
-						<li><a href="enraging.php">Ver&auml;rgend</a></li>
-						<li><a href="funny.php">Lustig</a></li>
+						<li><a href="cool.php">Das ist cool</a></li>
+						<li><a href="sad.php">Das ist traurig</a></li>
+						<li><a href="enraging.php">Das regt auf</a></li>
+						<li><a href="funny.php">Das ist zum lachen</a></li>
 					</ul>
 				</nav>
 			</div>
