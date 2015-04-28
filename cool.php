@@ -4,7 +4,46 @@
 		<title>BamHouse</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.more_button').live("click",function() {
+					var getId = $(this).attr("cool");
+					if (getId) {
+						$("#load_more_"+getId).html('<img src="images/load_img.gif" style="padding: 10px 0 0 100px"/>');
+						$.ajax({
+							type: "POST",
+							url: "more_content_cool.php",
+							data: "getLastContentId="+ getId, 
+							cache: false,
+							success: function(html){
+								$("div#newsdiv").append(html);
+								$("#load_more_"+getId).remove();
+							}
+						});
+					}
+					else {
+						$(".more_tab").html('The End');
+					}
+				return false;
+				});
+			});
+		</script>
+		<style>
+		.more_button {
+		    background: none repeat scroll 0 0 #FFFFFF;
+		    border: 1px solid #CCCCCC;
+		    border-radius: 5px;
+		    color: #000;
+		    font-weight: bold;
+		    height: auto;
+		    line-height: 32px;
+		    text-align: center;
+		    text-transform: none;
+		}
+		</style>
 	</head>
+
 	<body>
 	<?php
 		require_once('connect.php');
@@ -30,10 +69,10 @@
 			</div>
 			<div id="content">	
 				<h1>Das Neueste aus dem Netz</h1>		
-					
+						<div class='news' id = 'newsdiv'>
 						<?php
 						while ($row = mysql_fetch_assoc($query)) {
-							$articleid = $row['id'];
+							$id = $row['id'];
 							$headline = $row['headline'];
 							$cool = $row['cool'];
 							$sad = $row['sad'];
@@ -41,9 +80,8 @@
 							$funny = $row['funny'];
 							$date = $row['date'];
 
-							echo "<div class='news'>
-									<div id='indexdate'>{$date}</div>
-									<a href='news.php?id={$articleid}'>
+							echo "<div id='indexdate'>{$date}</div>
+									<a href='news.php?id={$id}'>
 										<h2>{$headline}</h2>
 									</a>
 											<div id='indexsmileyarea'><img class='preview_image' src='images/cool.png'/>
@@ -54,11 +92,14 @@
 												<span>{$enraging}</span>
 												<img class='preview_image' src='images/funny.png'/>
 												<span>{$funny}</span>
-											</div>
-								</div>";
-						}
-						?>
-					
+											</div>";
+							}?>				
+						</div>
+							<div class="more_div">
+								<a href="#"><div id="load_more_<?php echo $cool; ?>" class="more_tab">
+									<div class="more_button" id="<?php echo $cool; ?>">Load More Content</div>
+								</a></div>
+							</div>
 			</div>
 			
 			<div id="footer">
