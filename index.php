@@ -40,7 +40,7 @@
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<img src="images/Logo2.png" id="logo_image" />
+					<img src="images/Bamhouse.png" id="logo_image" />
 				</div>	
 			</div>
 			
