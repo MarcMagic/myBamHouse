@@ -42,6 +42,8 @@
 				<div id="logo">
 					<img src="images/Bamhouse.png" id="logo_image" />
 				</div>	
+				
+				
 			</div>
 			
 			<div id="topnav">
@@ -51,7 +53,7 @@
 						<li><a href="cool.php">Das ist cool</a></li>
 						<li><a href="sad.php">Das ist traurig</a></li>
 						<li><a href="enraging.php">Das regt auf</a></li>
-						<li><a href="funny.php">Das ist zum lachen</a></li>
+						<li><a href="funny.php">Das ist zum Lachen</a></li>
 					</ul>
 				</nav>
 			</div>

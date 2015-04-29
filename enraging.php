@@ -47,10 +47,10 @@
 				<nav>
 					<ul>
 						<li><a href="index.php">STARTSEITE</a></li>
-						<li><a href="cool.php">Cool</a></li>
-						<li><a href="sad.php">Traurig</a></li>
-						<li><a href="enraging.php">Ver&auml;rgend</a></li>
-						<li><a href="funny.php">Lustig</a></li>
+						<li><a href="cool.php">Das ist cool</a></li>
+						<li><a href="sad.php">Das ist traurig</a></li>
+						<li><a href="enraging.php">Das regt auf</a></li>
+						<li><a href="funny.php">Das ist zum Lachen</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -89,6 +89,17 @@
 									<div class="more_button" enraging="<?php echo $enraging; ?>">Mehr Neuigkeiten laden</div>
 								</a></div>
 							</div>
+			</div>
+			
+			<div id="rightside">
+				<h2>Youtube Hits</h2>
+				<?php
+				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 5");
+				while ($row = mysql_fetch_assoc($result)) {
+					$hitsquelle = $row['hitsquelle'];
+				echo "<iframe width='560' height='315' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
+				}
+				?>
 			</div>
 			
 			<div id="footer">
