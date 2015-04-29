@@ -56,8 +56,9 @@ body{
 
 #logo {
 	margin: 0 0 0 10px;
-	height: 120px;
 }
+
+#logo img{ height: 120px;}
 
 #topnav nav {
 	clear: both;
@@ -102,55 +103,23 @@ div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10
 
 #indexsmileyarea span {margin-right: 10px}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.vote_image {
-	width: 52px;
-}
-
 .preview_image {
 	width: 28px;
 }
 
-.counter {
-	margin-left: 15px;
-	font-size: 40px;
+.more_button {
+    background: none repeat scroll 0 0 #FFFFFF;
+    /*border: 1px solid #000000;*/
+    border-radius: 5px;
+	background-color: #8ab0b6;
+	color: #ffffff;
+    height: auto;
+    line-height: 32px;
+    text-align: center;
+    text-transform: none;
+    font-size: 16px;
 }
-
-.smileyunterschrift {
-	font-size: 20px;
-}
-
-
-
-div.comment{
-	font-size: 16px;
-	padding: 0 20px 0 20px;
-	margin: 30px 20px 30px 20px;
-}
-
-.comment b {
-	color: #547f86;
-}
-
-#commenttext {
-	margin: 10px;
-}
-
-
-
+.more_button:hover{background-color: #547f86;}
 
 
 #rightside{
@@ -170,30 +139,8 @@ div.comment{
 
 
 
-.more_button {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    color: #000;
-    height: auto;
-    line-height: 32px;
-    text-align: center;
-    text-transform: none;
-    font-size: 16px;
-}
 
-.all_loaded {
-	font-size: 24px;
-	color: #000000;
-	padding: 15px 8px;
-	margin: 0px;
-}
 
-hr {
-	clear: both;
-	margin: 10px;
-	color: #8ab0b6;
-}
 
 /*Aufteilung news------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -221,10 +168,30 @@ margin: 20px;
 	margin-bottom: 20px;
 }
 
+
 form.smiley {
 	text-align: center;
 	float: left;
 	margin: 15px 25px 15px 25px;
+}
+
+.vote_image {
+	width: 52px;
+}
+
+.counter {
+	margin-left: 15px;
+	font-size: 40px;
+}
+
+.smileyunterschrift {
+	font-size: 20px;
+}
+
+hr {
+	clear: both;
+	margin: 10px;
+	color: #8ab0b6;
 }
 
 #commentarea{
@@ -239,20 +206,38 @@ form.smiley {
 	margin-bottom: 10px;
 }
 
+div.comment{
+	font-size: 16px;
+	padding: 0 20px 0 20px;
+	margin: 30px 20px 30px 20px;
+}
+
+.comment b {
+	color: #547f86;
+}
+
+#commenttext {
+	margin: 10px;
+}
+
 #commentform {
 	margin: 20px 0 20px 0;
 }
 
 #commentform td {font-size: 16px; vertical-align: top;}
 
+
+
 .button {
 	padding: 8px 13px 8px 13px;
+	margin-left: 75px;
 	background-color: #8ab0b6;
 	font-family:'PT Sans Narrow', sans-serif;
 	font-size: 16px;
 	color: #ffffff;
 	border: 0px;
 }
+.button:hover{background-color: #547f86;}
 
 /*Footer-Seiten-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -260,6 +245,26 @@ form.smiley {
 	padding: 20px;
 	font-size: 14px;
 }
+
+/*More Content-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.all_loaded {
+	font-size: 24px;
+	color: #000000;
+	padding: 15px 8px;
+	margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
