@@ -37,7 +37,7 @@ body{
 }
 
 
-/*Aufteilung*/
+/*Aufteilung index---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #wrapper {
 	width: 900px;
@@ -56,9 +56,6 @@ body{
 
 #logo {
 	margin: 0 0 0 10px;
-}
-
-#logo_image {
 	height: 120px;
 }
 
@@ -80,16 +77,18 @@ body{
 }
 #content h1{margin: 0px; font-size: 45px; border-bottom: 1px #777777 solid; padding: 20px 0; font-weight: normal;}
 
-#article {
-	width: 100%;
-}
-#article h1{font-size: 32px; margin: 20px 20px 5px 20px; border-bottom: 1px #777777 solid; font-weight: normal;}
-
-#indexsmileyarea {
-	margin: 10px 0 10px 0;
+#newsdiv{
+	/*noch leer*/
 }
 
-#indexsmileyarea span {margin-right: 10px}
+div.news  {
+	font-size: 24px;
+	color: #000000;
+	padding: 15px 8px;
+	margin: 0px;
+	border-bottom: 1px solid #000000;
+}
+div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10px; margin-bottom: 10px;}
 
 #indexdate {
 	text-align: right;
@@ -97,30 +96,25 @@ body{
 	font-size: 14px;
 }
 
-#date{
-	margin: 0 20px 30px 20px;
-	text-align: right;
+#indexsmileyarea {
+	margin: 10px 0 10px 0;
 }
 
-#textcontent{ 
-font-size: 16px;
-margin: 20px;
-}
+#indexsmileyarea span {margin-right: 10px}
 
-#frage {
-	font-size: 24px;
-	margin: 20px 20px 0px 20px;
-}
 
-#smileyarea{
-	margin-bottom: 20px;
-}
 
-form.smiley {
-	text-align: center;
-	float: left;
-	margin: 15px 25px 15px 25px;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 .vote_image {
 	width: 52px;
@@ -139,17 +133,7 @@ form.smiley {
 	font-size: 20px;
 }
 
-#commentarea{
-	clear: both;
-	margin: 20px;
-}
 
-#commentarea h2 {
-	font-weight: normal;
-	font-size: 32px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
 
 div.comment{
 	font-size: 16px;
@@ -165,20 +149,9 @@ div.comment{
 	margin: 10px;
 }
 
-#commentform {
-	margin: 20px 0 20px 0;
-}
 
-#commentform td {font-size: 16px; vertical-align: top;}
 
-div.news  {
-	font-size: 24px;
-	color: #000000;
-	padding: 15px 8px;
-	margin: 0px;
-	border-bottom: 1px solid #000000;
-}
-div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10px; margin-bottom: 10px;}
+
 
 #rightside{
 	padding: 20px;
@@ -195,14 +168,7 @@ div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10
 #footer nav ul li  {color: #547f86; display:inline;}
 #footer nav li a{color: #547f86; margin-right: 10px;}
 
-.button {
-	padding: 8px 13px 8px 13px;
-	background-color: #8ab0b6;
-	font-family:'PT Sans Narrow', sans-serif;
-	font-size: 16px;
-	color: #ffffff;
-	border: 0px;
-}
+
 
 .more_button {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -229,8 +195,66 @@ hr {
 	color: #8ab0b6;
 }
 
+/*Aufteilung news------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*Footer-Seiten*/
+#article {
+	width: 100%;
+}
+#article h1{font-size: 32px; margin: 20px 20px 5px 20px; border-bottom: 1px #777777 solid; font-weight: normal;}
+
+#date{
+	margin: 0 20px 30px 20px;
+	text-align: right;
+}
+
+#textcontent{ 
+font-size: 16px;
+margin: 20px;
+}
+
+#frage {
+	font-size: 24px;
+	margin: 20px 20px 0px 20px;
+}
+
+#smileyarea{
+	margin-bottom: 20px;
+}
+
+form.smiley {
+	text-align: center;
+	float: left;
+	margin: 15px 25px 15px 25px;
+}
+
+#commentarea{
+	clear: both;
+	margin: 20px;
+}
+
+#commentarea h2 {
+	font-weight: normal;
+	font-size: 32px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#commentform {
+	margin: 20px 0 20px 0;
+}
+
+#commentform td {font-size: 16px; vertical-align: top;}
+
+.button {
+	padding: 8px 13px 8px 13px;
+	background-color: #8ab0b6;
+	font-family:'PT Sans Narrow', sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	border: 0px;
+}
+
+/*Footer-Seiten-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #textarea {
 	padding: 20px;

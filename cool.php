@@ -39,7 +39,7 @@
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<img src="images/Bamhouse.png" id="logo_image" />
+					<img src="images/Bamhouse.png"/>
 				</div>	
 			</div>
 			
