@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>BamHouse</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<link rel="icon" href="http://www.bamhouse.de/images/favicon.ico" type="image/x-icon" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
@@ -40,7 +41,7 @@
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<img src="images/Bamhouse.png"/>
+					<a href="index.php"><img src="images/Bamhouse.png"/></a>
 				</div>	
 			</div>
 			
@@ -107,11 +108,14 @@
 				<nav>
 					<ul>
 						<li><a href="impressum.html">Impressum</a></li>
-						<li><a href="agb.html">AGB</a></li>
+						<li><a href="ueber.html">Über Bamhouse</a></li>
 						<li><a href="datenschutz.html">Datenschutz</a></li>
 						<li><a href="kontakt.html">Kontakt</a></li>
 					</ul>
 				</nav>
+				
+				<p>&copy 2015 Copyright Bamhouse</p>
+
 			</div>
 		</div>
 	</body>

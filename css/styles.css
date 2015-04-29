@@ -134,8 +134,12 @@ div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10
 	padding: 5px 0;
 	font-size: 14px;
 }
-#footer nav ul li  {color: #547f86; display:inline;}
+#footer nav ul li   {float: left; color: #547f86; display:inline; }
 #footer nav li a{color: #547f86; margin-right: 10px;}
+
+#footer p {margin-left: 700px; color: #333333; }
+footer nav p {display:inline;}
+
 
 
 
@@ -254,23 +258,6 @@ div.comment{
 	padding: 15px 8px;
 	margin: 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
