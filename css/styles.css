@@ -19,7 +19,7 @@ a:visited {
 }
 
 a:hover {
-	color: #547f86;
+	color: #b4ccd0;
 }
 
 a:active {
@@ -222,6 +222,7 @@ div.comment{
 
 .comment b {
 	color: #547f86;
+	max-width: 50%;
 }
 
 #commenttext {

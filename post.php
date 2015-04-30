@@ -12,10 +12,10 @@ if (isset($_POST['submit'])) {
 			$comment = htmlspecialchars($comment);
 			$comment = htmlentities($comment);
 
-			$query = mysql_query("INSERT INTO `comment` VALUES ('', '{$newsid}', '{$name}', '{$comment}')");
+			$query = mysql_query("INSERT INTO `comment` VALUES ('', '{$newsid}', '{$name}', '{$comment}', '')");
 				$hosts = $_SERVER['HTTP_HOST'];
 				$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-				$extras = "news.php?id={$newsid}&com=1";
+				$extras = "news.php?id={$newsid}&com=1#commentarea";
 				header("Location: http://$hosts$uris/$extras");
 				exit;
 		}
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 		else {
 			$hosts= $_SERVER['HTTP_HOST'];
 			$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-			$extras = "news.php?id={$newsid}&com=0";
+			$extras = "news.php?id={$newsid}&com=0#commentarea";
 			header("Location: http://$hosts$uris/$extras");
 			exit;
 		}

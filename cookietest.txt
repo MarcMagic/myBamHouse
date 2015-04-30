@@ -1,0 +1,70 @@
+<?php
+require_once('connect.php');
+$newsid = $_POST['id'];
+if (isset($_POST['submit'])) {
+	if(isset($_COOKIE['votecookie']) && $_COOKIE['votecookie'] != 'cool') {
+		if($_COOKIE['votecookie'] == 'sad') {	
+		$query = mysql_query("UPDATE `index` SET sad=sad-1 WHERE id = '{$newsid}'");
+		}
+		if($_COOKIE['votecookie'] == 'funny') {	
+		$query = mysql_query("UPDATE `index` SET funny=funny-1 WHERE id = '{$newsid}'");
+		}
+		if($_COOKIE['votecookie'] == 'enraging') {	
+		$query = mysql_query("UPDATE `index` SET enraging=enraging-1 WHERE id = '{$newsid}'");
+		}
+	setcookie("votecookie", "cool");
+	$query = mysql_query("UPDATE `index` SET cool=cool+1 WHERE id = '{$newsid}'");
+	$hosts = $_SERVER['HTTP_HOST'];
+				$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+				$extras = "news.php?id={$newsid}&cool=1";
+				header("Location: http://$hosts$uris/$extras");
+				exit;
+	}
+	if(!isset($_COOKIE['votecookie']) {
+		setcookie("votecookie", "cool");
+		$query = mysql_query("UPDATE `index` SET cool=cool+1 WHERE id = '{$newsid}'");
+		$hosts = $_SERVER['HTTP_HOST'];
+				$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+				$extras = "news.php?id={$newsid}&cool=1";
+				header("Location: http://$hosts$uris/$extras");
+				exit;
+	}	
+	if(isset($_COOKIE['votecookie']) && $_COOKIE['votecookie'] == 'cool') {
+		$hosts= $_SERVER['HTTP_HOST'];
+		$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		$extras = "news.php?id={$newsid}&cool=0";
+		header("Location: http://$hosts$uris/$extras");
+		exit;
+	}
+}
+else {
+	$hosts= $_SERVER['HTTP_HOST'];
+	$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+	$extras = "news.php?id={$newsid}&cool=0";
+	header("Location: http://$hosts$uris/$extras");
+	exit;
+?>
+
+
+
+
+
+<?php
+require_once('connect.php');
+if (isset($_POST['submit'])) {
+	$newsid = $_POST['id'];
+	$query = mysql_query("UPDATE `index` SET enraging=enraging+1 WHERE id = '{$newsid}'");
+	$hosts = $_SERVER['HTTP_HOST'];
+				$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+				$extras = "news.php?id={$newsid}&enraging=1";
+				header("Location: http://$hosts$uris/$extras");
+				exit;
+}
+	else {
+			$hosts= $_SERVER['HTTP_HOST'];
+			$uris = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+			$extras = "news.php?id={$newsid}&enraging=0";
+			header("Location: http://$hosts$uris/$extras");
+			exit;
+		}
+?>

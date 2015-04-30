@@ -35,8 +35,8 @@
 	<body>
 	<?php
 		require_once('connect.php');
-		$query = mysql_query("SELECT * FROM `index` ORDER BY id DESC LIMIT 10");
 		mysql_query("SET NAMES 'utf8'");
+		$query = mysql_query("SELECT * FROM `index` ORDER BY id DESC LIMIT 10");
 	?>
 		<div id="wrapper">
 			<div id="top">

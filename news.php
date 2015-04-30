@@ -3,6 +3,7 @@
 <html>
 <?php
 		require_once('connect.php');
+		mysql_query("SET NAMES 'utf8'");
 		$newsid = $_GET['id'];
 		$chk = mysql_query("SELECT * FROM  `index` WHERE id = '{$newsid}'");
 		$nr = mysql_num_rows($chk);
@@ -10,7 +11,6 @@
 		if ($nr != 0){
 
 			$query = mysql_query("SELECT * FROM  `index` ORDER BY id DESC");
-			mysql_query("SET NAMES 'utf8'");
 			while ($row = mysql_fetch_assoc($chk)) {
 					$articleid = $row['id'];
 					$headline = $row['headline'];
