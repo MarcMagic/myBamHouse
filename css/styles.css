@@ -97,6 +97,10 @@ div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10
 	font-size: 14px;
 }
 
+#preview {
+	font-size: 16px;
+}
+
 #indexsmileyarea {
 	margin: 10px 0 10px 0;
 }
@@ -247,7 +251,7 @@ div.comment{
 
 #textarea {
 	padding: 20px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 /*More Content-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

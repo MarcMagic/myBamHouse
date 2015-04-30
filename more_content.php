@@ -20,8 +20,8 @@ if(isSet($_POST['getLastContentId'])) {
 			<a href='news.php?id={$id}'>
 				<h2>{$headline}</h2>
 			</a>
-			<div id = preview>".substr($text,0,100).
-									"<a href='news.php?id={$id}'><b>... weiterlesen</b></a></div>
+			<div id = preview>".substr($text,0,230).
+									"<a href='news.php?id={$id}'><b> ...weiterlesen</b></a></div>
 				<div id='indexsmileyarea'><img class='preview_image' src='images/cool.png'/>
 					<span>{$cool}</span>
 					<img class='preview_image' src='images/sad.png'/>

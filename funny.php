@@ -36,7 +36,9 @@
 	<body>
 	<?php
 		require_once('connect.php');
+		mysql_query("SET NAMES 'utf8'");
 		$query = mysql_query("SELECT * FROM `index` ORDER BY funny DESC LIMIT 10");
+		
 	?>
 		<div id="wrapper">
 			<div id="top">
@@ -63,6 +65,7 @@
 						while ($row = mysql_fetch_assoc($query)) {
 							$id = $row['id'];
 							$headline = $row['headline'];
+							$text = $row['text'];
 							$cool = $row['cool'];
 							$sad = $row['sad'];
 							$enraging = $row['enraging'];
@@ -74,6 +77,8 @@
 									<a href='news.php?id={$id}'>
 										<h2>{$headline}</h2>
 									</a>
+									<div id = preview>".substr($text,0,230).
+									"<a href='news.php?id={$id}'><b> ...weiterlesen</b></a></div>
 											<div id='indexsmileyarea'><img class='preview_image' src='images/cool.png'/>
 												<span>{$cool}</span>
 												<img class='preview_image' src='images/sad.png'/>
