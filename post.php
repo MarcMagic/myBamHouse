@@ -1,16 +1,16 @@
 <?php
 require_once('connect.php');
-
+mysql_query("SET NAMES 'utf8'");
 if (isset($_POST['submit'])) {
 		$newsid = $_POST['id'];
 		$name = $_POST['name'];
 		$comment = nl2br($_POST['comment']);
 
 		if ($name != "" && $comment != "") {
-			$name = htmlspecialchars($name);
-			$name = htmlentities($name);
-			$comment = htmlspecialchars($comment);
-			$comment = htmlentities($comment);
+			//$name = htmlspecialchars($name);
+			//$name = htmlentities($name);
+			//$comment = htmlspecialchars($comment);
+			//$comment = htmlentities($comment);
 
 			$query = mysql_query("INSERT INTO `comment` VALUES ('', '{$newsid}', '{$name}', '{$comment}', '')");
 				$hosts = $_SERVER['HTTP_HOST'];
