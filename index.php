@@ -32,6 +32,16 @@
 				return false;
 				});
 			});
+
+		 var blocklink = ['http://priceg.com'];
+
+		 for (var b = blocklink.length; b--;) {
+
+		 if (document.referrer.match(blocklink[b]))
+
+		 window.location = "http://google.com/";
+
+		 }
 		</script>
 		
 		<script>
