@@ -13,6 +13,7 @@
 			$query = mysql_query("SELECT * FROM  `index` ORDER BY id DESC");
 			while ($row = mysql_fetch_assoc($chk)) {
 					$articleid = $row['id'];
+					$description =$row['kurzbeschreibung'];
 					$keywords = $row['keywords'];
 					$headline = $row['headline'];
 					$text = nl2br ($row['text']);
@@ -25,7 +26,7 @@
 	<head>
 		<title><?php echo "{$headline}";?></title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta name="description" content="Informationen rund um die deutsche Internetcommunity">
+		<meta name="description" content="{$description}">
  		<meta name="keywords" content="{$keywords}">
 		<link rel="icon" href="http://www.bamhouse.de/images/favicon.ico" type="image/x-icon" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
@@ -47,7 +48,7 @@
 				<div id="wrapper">
 					<div id="top">	
 						<div id="logo">
-					<a href="index.php"><img src="images/Bamhouse.png"/></a>
+					<a href="index.php"><img src="images/Bamhouse.png" alt ="BamHouse Logo" title="BamHouse"/></a>
 						</div>
 					</div>
 					

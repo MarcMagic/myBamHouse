@@ -3,7 +3,7 @@
 	<head>
 		<title>BamHouse - virale Trends</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta name="description" content="Informationen rund um die deutsche Internetcommunity">
+		<meta name="description" content="Informationen rund um die deutsche Internetcommunity, sowie Virales in YouTube, Twitter, Instagram, Facebook, Vine und co.">
  		<meta name="keywords" content="Internet, YouTube, Twitter, Facebook, Hashtag, viral, trends, online, instagram, news, blogger, bamhouse">
 		<link rel="icon" href="http://www.bamhouse.de/images/favicon.ico" type="image/x-icon" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
@@ -14,7 +14,7 @@
 				$('.more_button').live("click",function() {
 					var getId = $(this).attr("id");
 					if (getId) {
-						$("#load_more_"+getId).html('<img src="images/load_img.gif" style="padding: 10px 0 0 100px"/>');
+						$("#load_more_"+getId).html('<img src="images/load_img.gif alt="Ladebalken" title="Ladebalken" style="padding: 10px 0 0 100px"/>');
 						$.ajax({
 							type: "POST",
 							url: "more_content.php",
@@ -54,7 +54,7 @@
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<a href="index.php"><img src="images/Bamhouse.png"/></a>
+					<a href="index.php"><img src="images/Bamhouse.png" alt ="BamHouse Logo" title="BamHouse" /></a>
 				</div>
 			</div>
 			
@@ -92,13 +92,13 @@
 									</a>
 									<div id = preview>".substr($text,0,230).
 									"<a href='news.php?id={$id}'><b> ...weiterlesen</b></a></div>
-											<div id='indexsmileyarea'><img class='preview_image' src='images/cool.png'/>
+											<div id='indexsmileyarea'><img class='preview_image' src='images/cool.png' alt='smiley cool' title='cool'/>
 												<span>{$cool}</span>
-												<img class='preview_image' src='images/sad.png'/>
+												<img class='preview_image' src='images/sad.png' alt ='smiley traurig' title='traurig'/>
 												<span>{$sad}</span>
-												<img class='preview_image' src='images/enraging.png'/>
+												<img class='preview_image' src='images/enraging.png' alt ='smiley verärgenrd' title='verärgernd'/>
 												<span>{$enraging}</span>
-												<img class='preview_image' src='images/funny.png'/>
+												<img class='preview_image' src='images/funny.png' alt ='smiley lustig' title='lustig'/>
 												<span>{$funny}</span>
 											</div>
 							</div>";
