@@ -26,11 +26,12 @@
 	<head>
 		<title><?php echo "{$headline}";?></title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta name="description" content="{$description}">
- 		<meta name="keywords" content="{$keywords}">
+		<meta name="description" content=<?php echo "{$description}"; ?>>
+		<meta name="keywords" content= <?php echo "{$keywords}"?>>
 		<link rel="icon" href="http://www.bamhouse.de/images/favicon.ico" type="image/x-icon" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+		<base target="_blank">
 		
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
