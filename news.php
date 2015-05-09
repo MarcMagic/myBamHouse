@@ -49,18 +49,18 @@
 				<div id="wrapper">
 					<div id="top">	
 						<div id="logo">
-					<a href="index.php"><img src="images/Bamhouse.png" alt ="BamHouse Logo" title="BamHouse"/></a>
+					<a href="index.php" target="_self"><img src="images/Bamhouse.png" alt ="BamHouse Logo" title="BamHouse"/></a>
 						</div>
 					</div>
 					
 					<div id="topnav">
 						<nav>
 							<ul>
-								<li><a href="index.php">STARTSEITE</a></li>
-								<li><a href="cool.php">Das ist cool</a></li>
-								<li><a href="sad.php">Das ist traurig</a></li>
-								<li><a href="enraging.php">Das regt auf</a></li>
-								<li><a href="funny.php">Das ist zum Lachen</a></li>
+								<li><a href="index.php" target="_self">STARTSEITE</a></li>
+								<li><a href="cool.php" target="_self">Das ist cool</a></li>
+								<li><a href="sad.php" target="_self">Das ist traurig</a></li>
+								<li><a href="enraging.php" target="_self">Das regt auf</a></li>
+								<li><a href="funny.php" target="_self">Das ist zum Lachen</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -77,14 +77,14 @@
 				<div id="frage">Wie findest du das?</div>
 				<div id="smileyarea">
 					
-							<form class="smiley" action = "vote_cool.php" method = "post">
+							<form class="smiley" action = "vote_cool.php" method = "post" target="_self">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Cool!" src="/images/cool.png" alt="Cool" class="vote_image"/>
 									<span class="counter"><?php echo $cool;?></span><br>
 									<span class="smileyunterschrift">Cool</span>
 							</form>
 						
-							<form class="smiley" action = "vote_sad.php" method = "post">
+							<form class="smiley" action = "vote_sad.php" method = "post" target ="_self">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Sad!" src="/images/sad.png" alt="Sad" class="vote_image"/>
 									<span class="counter"><?php echo $sad;?></span><br>
@@ -92,14 +92,14 @@
 							</form>
 
 												
-							<form class="smiley" action = "vote_enraging.php" method = "post">
+							<form class="smiley" action = "vote_enraging.php" method = "post" target ="_self">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Enraging!" src="/images/enraging.png" alt="Enraging" class="vote_image"/>
 									<span class="counter"><?php echo $enraging;?></span><br>
 									<span class="smileyunterschrift">Ver&auml;rgernd</span>
 							</form>
 						
-							<form class="smiley" action = "vote_funny.php" method = "post">
+							<form class="smiley" action = "vote_funny.php" method = "post" target="_self">
 								<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
 									<input name="submit" type="image" value="Funny!" src="/images/funny.png" alt="Funny" class="vote_image"/>
 									<span class="counter"><?php echo $funny;?></span><br>
@@ -122,7 +122,7 @@
 							";
 						}
 	    				?>
-	    				<form id= "commentform" action = "post.php" method = "post">
+	    				<form id= "commentform" action = "post.php" method = "post" target="_self">
 							<table>
 								<tr>
 									<td>Name: </td><td><input type="text" name="name" size="50" style="width: 200px;"/>
