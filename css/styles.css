@@ -275,5 +275,25 @@ div.comment{
 	margin: 0px;
 }
 
+/* Kanalradar-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.kanalprofil{
+	margin-top: 15px;
+}
+
+.kanalpic{
+	height: 150px;
+	width: 150px;
+	background-color: #333333;
+	float: left;
+
+}
+
+.kanaltext{
+	height: 150px;
+	background-color: #777777;
+	}
+
+
 
 
