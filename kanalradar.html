@@ -3,19 +3,51 @@
 	<head>
 		<title>Youtube Kanalradar</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Informationen rund um die deutsche Internetcommunity, sowie Virales in YouTube, Twitter, Instagram, Facebook, Vine und co.">
+ 		<meta name="keywords" content="Internet, YouTube, Twitter, Facebook, Hashtag, viral, trends, online, instagram, news, blogger, bamhouse">
 		<link rel="icon" href="http://www.bamhouse.de/images/favicon.ico" type="image/x-icon" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 
+		<script type="text/javascript">
+			$(function() {
+				$('.more_button').live("click",function() {
+					var getId = $(this).attr("id");
+					if (getId) {
+						$("#load_more_"+getId).html('<img src="images/load_img.gif alt="Ladebalken" title="Ladebalken" style="padding: 10px 0 0 100px"/>');
+						$.ajax({
+							type: "POST",
+							url: "more_content_kanalradar.php",
+							data: "getLastContentId="+ getId, 
+							cache: false,
+							success: function(html){
+								$("div#newsdiv").append(html);
+								$("#load_more_"+getId).remove();
+							}
+						});
+					}
+					else {
+						$(".more_tab").html('The End');
+					}
+				return false;
+				});
+			});
+		</script>
+
 	
 	</head>
 	<body>
+		<?php
+			require_once('connect.php');
+			mysql_query("SET NAMES 'utf8'");
+			$query = mysql_query("SELECT * FROM `kanalradar` ORDER BY id DESC LIMIT 10");
+		?>
 	
 		<div id="wrapper">
 		
 			<div id="top">
 				<div id="logo">
-					<a href="index.php"><img src="images/Bamhouse.png"/></a>
+					<a href="index.php"><img src="images/Bamhouse.png" alt ="BamHouse Logo" title="BamHouse"/></a>
 				</div>
 			</div>
 			
@@ -31,14 +63,23 @@
 				</nav>
 			</div>
 			
+
+			<?php
+				while ($row = mysql_fetch_assoc($query)) {
+							$id = $row['id'];
+							$kanallink = $row['kanallink'];
+							$kanalname = $row['kanalname'];
+							$beschreibung = $row['beschreibung'];
+			?>				
 			<div class="kanalprofil">
+				
 				<div class="kanalpic">
-					img 200x200 Pic
+					<?php echo "<img src='{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
 				</div>
 				
 				<div class="kanaltext">
-					<h1>Kanalname als Link</h1>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimat BIS 550 ZEICHEN</p>
+					<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}"; ?></a></h1>
+					<p><?php echo "{$beschreibung}";?></p>
 				</div>
 				
 				
@@ -56,21 +97,6 @@
 				
 				<p>&copy 2015 Copyright Bamhouse</p>
 			</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 		</div>
 	
