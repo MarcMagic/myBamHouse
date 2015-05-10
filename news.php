@@ -106,7 +106,11 @@
 									<span class="smileyunterschrift">Lustig</span>
 							</form>
 				</div>
-
+				<div style="clear: left; float: right; margin-right: 20px; font-size: 130%;">
+					BamHouse auf Twitter folgen um nichts mehr zu verpassen:&nbsp;&nbsp;&nbsp;
+					<a href="https://twitter.com/BamHouse1" class="twitter-follow-button" data-show-count="false" data-lang="de" data-size="large" data-show-screen-name="false">@BamHouse1 folgen</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</div>
 					<hr>
 
 					<div id="commentarea">
