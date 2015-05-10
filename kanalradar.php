@@ -8,7 +8,7 @@
 		<link rel="icon" href="http://www.bamhouse.de/images/favicon.ico" type="image/x-icon" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
 				$('.more_button').live("click",function() {
@@ -74,15 +74,24 @@
 			<div class="kanalprofil">
 				
 				<div class="kanalpic">
-					<?php echo "<img src='{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
+					<?php echo "<img src='images/{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
 				</div>
 				
 				<div class="kanaltext">
-					<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}"; ?></a></h1>
+					<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
 					<p><?php echo "{$beschreibung}";?></p>
 				</div>
 				
 				
+			</div>
+			<?php
+			}
+			?>
+
+			<div class="more_div">
+				<a href="#"><div id="load_more_<?php echo $id; ?>" class="more_tab">
+					<div class="more_button" id="<?php echo $id; ?>">Mehr Kanäle laden</div>
+				</a></div>
 			</div>
 			
 			<div id="footer">

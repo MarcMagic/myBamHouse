@@ -3,7 +3,7 @@ include "connect.php";
 mysql_query("SET NAMES 'utf8'");
 if(isSet($_POST['getLastContentId'])) {
 	$getLastContentId=$_POST['getLastContentId'];
-	$result=mysql_query("SELECT * FROM `index` WHERE id <'$getLastContentId' ORDER BY id DESC LIMIT 10");
+	$result=mysql_query("SELECT * FROM `kanalradar` WHERE id <'$getLastContentId' ORDER BY id DESC LIMIT 10");
 	$count=mysql_num_rows($result);
 	if($count>0){
 		while ($row = mysql_fetch_assoc($query)) {
@@ -15,7 +15,7 @@ if(isSet($_POST['getLastContentId'])) {
 			<div class="kanalprofil">
 				
 				<div class="kanalpic">
-					<?php echo "<img src='{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
+					<?php echo "<img src=images/'{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
 				</div>
 				
 				<div class="kanaltext">
