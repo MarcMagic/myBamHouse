@@ -62,7 +62,7 @@
 					<ul>
 						<li><a href="https://www.facebook.com/pages/BamHouse/1647660275446983?fref=ts" target="_blank"><img src="images/facebook.png" /></a></li>
 						<li><a href="https://twitter.com/BamHouse1" target="_blank"><img src="images/twitter.png" /></a></li>
-						<li><a href="ueber.html" target="_blank"><img src="images/icon2.png" /></a></li>
+						<li><a href="ueber.html" ><img src="images/Icon2.png" /></a></li>
 					</ul>
 				</div>
 			</div>
