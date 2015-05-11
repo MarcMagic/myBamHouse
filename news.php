@@ -32,6 +32,9 @@
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 		<base target="_blank">
+		<meta name="twitter:widgets:theme" content="light">
+		<meta name="twitter:widgets:link-color" content="#8ab0b6">
+		<meta name="twitter:widgets:border-color" content="#8ab0b6">
 		
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
