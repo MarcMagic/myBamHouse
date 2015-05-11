@@ -93,36 +93,45 @@
 				</nav>
 			</div>
 			
-
+			<div id="radar">
 			<?php
 				while ($row = mysql_fetch_assoc($query)) {
 							$id = $row['id'];
 							$kanallink = $row['kanallink'];
 							$kanalname = $row['kanalname'];
 							$beschreibung = $row['beschreibung'];
-			?>				
-			<div class="kanalprofil">
-				
-				<div class="kanalpic">
-					<?php echo "<img src='images/{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
+			?>	
+			
+				<div class="kanalprofil">
+					
+					<div class="kanalpic">
+						<?php echo "<img src='images/{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
+					</div>
+					
+					<div class="kanaltext">
+						<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
+						<p><?php echo "{$beschreibung}";?></p>
+					</div>
+					
+					
 				</div>
-				
-				<div class="kanaltext">
-					<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
-					<p><?php echo "{$beschreibung}";?></p>
-				</div>
+				<?php
+						}
+						?>
 				
 				
-			</div>
-			<?php
-			}
-			?>
-
-			<div class="more_div">
+				
+				<div class="more_div">
 				<a href="#"><div id="load_more_<?php echo $id; ?>" class="more_tab">
 					<div class="more_button" id="<?php echo $id; ?>">Mehr Kanäle laden</div>
 				</a></div>
+				</div>
+				
+				
 			</div>
+			
+
+			
 			
 			<div id="footer">
 				<nav>

@@ -302,20 +302,24 @@ div.comment{
 
 /* Kanalradar-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+#radar{
+	width: 100%;
+}
 .kanalprofil{
-	margin-top: 15px;
+	margin: 10px;
 }
 
 .kanalpic{
-	height: 150px;
-	width: 150px;
+	
 	background-color: #333333;
 	float: left;
-
+	width: 100px;
+	height: 100px;
 }
+img.kanalpic{width: 100px; height:100p;}
 
 .kanaltext{
-	height: 150px;
+	
 	background-color: #777777;
 	}
 
