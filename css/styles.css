@@ -49,28 +49,41 @@ body{
 #top {
 	background-color: #f3f4ed;
 	width: 100%;
-	padding-top: 20px;
+	
 	overflow: hidden;
 	border-bottom: 1px #eeeeee solid;
 }
 
+
+
 #logo {
-	margin: 0 0 10px 10px;
+	margin: 20px 0 10px 10px;
 	float: left;
 }
 
 #logo img{ height: 120px;}
 
+#top-right{
+	float:right;
+}
+
+#watch{
+	margin: 5px 5px 0 0px;	
+}
+
 #social-media{
-	float: right; 
 	margin: 70px 10px 0 0;
 	padding: 5px;
-	
+	float:right;
 }
 #social-media p {color: #000000; font-size: 12px; display: inline;}
 #social-media img {width: 24px; height: 24px; margin: 1px;}
 #social-media ul li {display: inline; }
 #social-media ul{ list-style-type:none; margin: 0; padding: 0;}
+
+#watch, #social-media{
+
+}
 
 #topnav nav {
 	clear: both;
