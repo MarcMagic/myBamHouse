@@ -95,6 +95,8 @@
 				<?php
 					while ($row = mysql_fetch_assoc($query)) {
 								$id = $row['id'];
+								$kanalpic = $row['kanalpic'];
+								$kanalvid = $row['kanalvid'];
 								$kanallink = $row['kanallink'];
 								$kanalname = $row['kanalname'];
 								$beschreibung = $row['beschreibung'];
@@ -102,13 +104,19 @@
 				
 					<div class="kanalprofil">
 						
-						<div class="kanalpic">
-							<?php echo "<img src='images/{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
+						<div id="left">
+							<div id="kanalpic">
+								<p><?php echo "<img src='images/{$kanalpic}.png' alt='{$kanalpic}' title='{$kanalpic}'"; ?></p>
+							</div>
+							
+							<div id="kanaltext">
+								<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
+								<p><?php echo "{$beschreibung}";?></p>
+							</div>
 						</div>
 						
-						<div class="kanaltext">
-							<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
-							<p><?php echo "{$beschreibung}";?></p>
+						<div id="kanalvid">
+							<p><?php echo "<iframe width='560' height='315' src='{$kanalvid}' frameborder='0' allowfullscreen></iframe>"; ?></p>
 						</div>
 					</div>
 			<?php

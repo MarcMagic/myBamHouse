@@ -307,21 +307,27 @@ div.comment{
 }
 .kanalprofil{
 	margin: 10px;
+	border: 1px solid #000000;
 }
 
-.kanalpic{
-	
-	background-color: #333333;
-	float: left;
-	width: 100px;
+#left{
+float:left;
+width:300px;
+}
+
+#kanalpic p img{
+height: 100px;
+
+margin: 5px 15px 5px 5px;
+}
+
+
+#kanaltext{
 	height: 100px;
-}
-img.kanalpic{width: 100px; height:100p;}
 
-.kanaltext{
-	
-	background-color: #777777;
+	margin: 5px;
 	}
+#kanaltext h1 p{margin-left:5px;}
 
 
 
