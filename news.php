@@ -21,7 +21,9 @@
 					$cool = $row['cool'];
 					$sad = $row['sad'];
 					$enraging = $row['enraging'];
-					$funny = $row['funny']
+					$funny = $row['funny'];
+					$otherlink = $row['otherlink'];
+					$othertitle = $row['othertitle'];
 	?>
 	<head>
 		<title><?php echo "{$headline}";?></title>
@@ -169,6 +171,8 @@
 	    					<input class="button" name="submit" type="submit" value="Kommentieren"/>
 	    				</form></br>
 	    			</div>
+
+	    			<?php echo "<div style='font-size: 24px; margin: 20px;'>Das könnte dich auch interessieren: <a href='{$otherlink}' target='_self'>{$othertitle}</a></div>";?>
 		    	
 				
 				<div id="footer">
