@@ -53,7 +53,6 @@
 				<div id="top-right">
 				
 					<div id="watch">
-						
 						<!--Kostenlose, frei konfigurierbare Homepage-Uhr von www.schnelle-online.info/Homepage/Tools.html. Ohne Gewähr, ohne Haftung.
 						Nutzungbedingung: Dieser Kommentar und der Link unten dürfen nicht entfernt oder (nofollow) modifiziert werden.
 						-->
@@ -67,7 +66,6 @@
 						(function() {if (typeof(SOI.scrAc21) == "undefined") { SOI.scrAc21=document.createElement('script');SOI.scrAc21.type='text/javascript'; SOI.scrAc21.async=true;SOI.scrAc21.src=((document.location.protocol == 'https:') ? 
 						'https://' : 'http://') + 'homepage-tools.schnelle-online.info/Homepage/atomicclock2_1.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(SOI.scrAc21, s);}})();
 						</script> Berlin
-						
 					</div>
 					
 					<div id="social-media">
@@ -94,40 +92,40 @@
 			</div>
 			
 			<div id="radar">
-			<?php
-				while ($row = mysql_fetch_assoc($query)) {
-							$id = $row['id'];
-							$kanallink = $row['kanallink'];
-							$kanalname = $row['kanalname'];
-							$beschreibung = $row['beschreibung'];
-			?>	
-			
-				<div class="kanalprofil">
-					
-					<div class="kanalpic">
-						<?php echo "<img src='images/{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
-					</div>
-					
-					<div class="kanaltext">
-						<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
-						<p><?php echo "{$beschreibung}";?></p>
-					</div>
-					
-					
-				</div>
 				<?php
-						}
-						?>
+					while ($row = mysql_fetch_assoc($query)) {
+								$id = $row['id'];
+								$kanallink = $row['kanallink'];
+								$kanalname = $row['kanalname'];
+								$beschreibung = $row['beschreibung'];
+				?>	
 				
+					<div class="kanalprofil">
+						
+						<div class="kanalpic">
+							<?php echo "<img src='images/{$kanalname}.jpg' alt='{$kanalname}' title='{$kanalname}'";?>
+						</div>
+						
+						<div class="kanaltext">
+							<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
+							<p><?php echo "{$beschreibung}";?></p>
+						</div>
+					</div>
+			<?php
+			}
+			?>
+					
+			</div>
 				
-				
+					
+					
 				<div class="more_div">
-				<a href="#"><div id="load_more_<?php echo $id; ?>" class="more_tab">
-					<div class="more_button" id="<?php echo $id; ?>">Mehr Kanäle laden</div>
-				</a></div>
+					<a href="#">
+						<div id="load_more_<?php echo $id; ?>" class="more_tab">
+							<div class="more_button" id="<?php echo $id; ?>">Mehr Kanäle laden</div>
+					</a></div>
 				</div>
-				
-				
+					
 			</div>
 			
 
@@ -146,7 +144,6 @@
 				<p>&copy 2015 Copyright Bamhouse</p>
 			</div>
 			
-		</div>
 	
 	</body>
 </html>
