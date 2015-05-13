@@ -157,6 +157,7 @@
 						<li><a href="ueber.html">Über Bamhouse</a></li>
 						<li><a href="datenschutz.html">Datenschutz</a></li>
 						<li><a href="kontakt.html">Kontakt</a></li>
+						<li><a href="radarwie.html">FAQ Kanalradar</a></li>
 					</ul>
 				</nav>
 				
