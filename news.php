@@ -140,10 +140,21 @@
 									<span class="counter"><?php echo $funny;?></span><br>
 									<span class="smileyunterschrift">Lustig</span>
 							</form>
-				</div>
+
+					</div>
 				
 					<hr>
-
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+								<!-- nexttosmileys -->
+								<ins class="adsbygoogle"
+								     style="display:block"
+								     data-ad-client="ca-pub-3972698499720775"
+								     data-ad-slot="2183936841"
+								     data-ad-format="auto"></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
+								
 					<div id="commentarea">
 		    			<h2>Kommentare</h2>
 		    			<?php
