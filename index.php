@@ -161,7 +161,7 @@
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
-				</div>
+			</div>
 			
 			<div id="footer">
 				<nav>
