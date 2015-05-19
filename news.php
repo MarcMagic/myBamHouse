@@ -50,6 +50,13 @@
 		</script>
 	</head>
 	<body>
+	<script src="/cookiechoices.js"></script>
+	<script>
+	  document.addEventListener('DOMContentLoaded', function(event) {
+	    cookieChoices.showCookieConsentBar('Um eine Mehrfach-Bewertung der einzelnen Artikel zu verhindern speichern wir Cookies.',
+	      'Hinweis schließen');
+	  });
+	</script>
 	
 				<div id="wrapper">
 					<div id="top">	
