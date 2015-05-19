@@ -154,6 +154,7 @@ div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10
 #rightside{
 	padding: 20px;
 	margin-left: 675px;
+	overflow: visible;
 }
 #rightside iframe {width: 196px; height: 110px; margin-bottom: 20px;}
 
