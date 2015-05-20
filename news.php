@@ -53,7 +53,7 @@
 	<script src="/cookiechoices.js"></script>
 	<script>
 	  document.addEventListener('DOMContentLoaded', function(event) {
-	    cookieChoices.showCookieConsentBar('Um eine Mehrfach-Bewertung der einzelnen Artikel zu verhindern speichern wir Cookies.',
+	    cookieChoices.showCookieConsentBar('Um eine Mehrfach-Bewertung der einzelnen Artikel zu verhindern speichern wir Cookies. Indem Sie fortfahren, stimmen Sie der Verwendung zu.',
 	      'Hinweis schließen');
 	  });
 	</script>
@@ -151,6 +151,8 @@
 					</div>
 				
 					<hr>
+						<div style="text-align:center;"><iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=bamh-21&o=3&p=48&l=ur1&category=de_piv&banner=00NJE46FJZ5AP106AQR2&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe></div>
+
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 								<!-- nexttosmileys -->
 								<ins class="adsbygoogle"

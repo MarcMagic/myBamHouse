@@ -49,7 +49,7 @@
 	<script src="/cookiechoices.js"></script>
 	<script>
 	  document.addEventListener('DOMContentLoaded', function(event) {
-	    cookieChoices.showCookieConsentBar('Um eine Mehrfach-Bewertung der einzelnen Artikel zu verhindern speichern wir Cookies.',
+	    cookieChoices.showCookieConsentBar('Um eine Mehrfach-Bewertung der einzelnen Artikel zu verhindern speichern wir Cookies. Indem Sie fortfahren, stimmen Sie der Verwendung zu.',
 	      'Hinweis schließen');
 	  });
 	</script>
@@ -158,16 +158,8 @@
 				echo "<iframe width='560' height='315' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
 				}
 				?>
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- unter videos -->
-				<ins class="adsbygoogle"
-				     style="display:block"
-				     data-ad-client="ca-pub-3972698499720775"
-				     data-ad-slot="9876510446"
-				     data-ad-format="auto"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
+				<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=bamh-21&o=3&p=14&l=ur1&category=de_piv&banner=1CFDRBX431RE87XYZSG2&f=ifr" width='160 !important;'  height='600 !important;' scrolling='no' border='0' marginwidth='0' style='border:none;' frameborder='0'></iframe>
+
 			</div>
 			
 			<div id="footer">
