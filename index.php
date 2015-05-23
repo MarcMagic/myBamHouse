@@ -61,7 +61,7 @@
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<a href="index.php"><img src="images/Bamhouse.png" alt ="BamHouse Logo" title="BamHouse" /></a>
+					<a href="index.php"><img src="images/Bamhouse.png" alt ="BamHouse" title="BamHouse" /></a>
 				</div>
 				
 				<div id="top-right">

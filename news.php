@@ -151,7 +151,7 @@
 					</div>
 				
 					<hr>
-						<div style="text-align:center;"><iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=bamh-21&o=3&p=48&l=ur1&category=de_piv&banner=00NJE46FJZ5AP106AQR2&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe></div>
+						
 
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 								<!-- nexttosmileys -->
@@ -177,6 +177,7 @@
 							";
 						}
 	    				?>
+	    				<p>Sag uns was zu dazu denkst. Du musst dich nirgends einloggen um zu kommentieren, wir behalten uns allerdings vor unangemessene Kommentare zu entfernen.</p>
 	    				<form id= "commentform" action = "post.php" method = "post" target="_self">
 							<table>
 								<tr>
@@ -193,7 +194,7 @@
 	    			</div>
 
 	    			<?php echo "<div style='font-size: 24px; margin: 20px;'>Das könnte dich auch interessieren: <a href='{$otherlink}' target='_self'>{$othertitle}</a></div>";?>
-		    	
+		    		<div style="text-align:center;"><iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=bamh-21&o=3&p=48&l=ur1&category=de_piv&banner=00NJE46FJZ5AP106AQR2&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe></div>
 				
 				<div id="footer">
 					<nav>
@@ -216,4 +217,9 @@
 		}
 		?>
 	</body>
+	<script type="text/javascript" src="http://wms-eu.amazon-adsystem.com/20070822/DE/js/link-enhancer-common.js?tag=bamh-21">
+</script>
+<noscript>
+    <img src="http://wms-eu.amazon-adsystem.com/20070822/DE/img/noscript.gif?tag=bamh-21" alt="" />
+</noscript>
 </html>
