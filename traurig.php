@@ -15,7 +15,7 @@
 						$("#load_more_"+getId).html('<img src="images/load_img.gif" style="padding: 10px 0 0 100px"/>');
 						$.ajax({
 							type: "POST",
-							url: "more_content_funny.php",
+							url: "more_content_sad.php",
 							data: "getLastContentId="+ getId, 
 							cache: false,
 							success: function(html){
@@ -133,8 +133,8 @@
 							}?>				
 						</div>
 							<div class="more_div">
-								<a href="#"><div id="load_more_<?php echo $funny; ?>" class="more_tab">
-									<div class="more_button" funny="<?php echo $funny; ?>">Mehr Neuigkeiten laden</div>
+								<a href="#"><div id="load_more_<?php echo $sad; ?>" class="more_tab">
+									<div class="more_button" sad="<?php echo $sad; ?>">Mehr Neuigkeiten laden</div>
 								</a></div>
 							</div>
 			</div>
