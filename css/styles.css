@@ -40,7 +40,7 @@ body{
 /*Aufteilung index---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #wrapper {
-	width: 65%;
+	width: 70%;
 	margin: .8em auto;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 100px grey;
@@ -51,7 +51,7 @@ body{
 	width: 100%;
 	
 	overflow: hidden;
-	border-bottom: 1px #eeeeee solid;
+	border-bottom: 0.1em #eeeeee solid;
 }
 
 
@@ -59,25 +59,29 @@ body{
 #logo {
 	margin: 2em 0 1em 1em;
 	float: left;
+	width: 30%
 }
 
-#logo img{ height: 120px;}
+#logo img{ width: 90%;}
 
 #top-right{
 	float:right;
+	width: 30%
 }
 
 #watch{
 	margin: .5em .5em 0 0px;	
+	float:right;
 }
 
 #social-media{
 	margin: 6em .5em 0 0;
 	padding: .5em;
 	float:right;
+	width: 60%
 }
-#social-media p {color: #000000; font-size: .8em; display: inline;}
-#social-media img {width: 24px; height: 24px; margin: 1px;}
+#social-media p {color: #000000; font-size: .8em; display: inline; }
+#social-media img {width: 10%;  margin: 1px; }
 #social-media ul li {display: inline; }
 #social-media ul{ list-style-type:none; margin: 0; padding: 0;}
 
@@ -90,51 +94,51 @@ body{
 	background-color: #8ab0b6;
 	font-size: 1em;
 }
-#topnav li{width: 18%;}
-#topnav nav ul{margin: 0; padding: 1em 2.5em 1em 2.5em;  border-bottom: 3px #cccccc solid;}
+
+#topnav nav ul{margin: 0; padding: 1em 1.5em 1em 1.5em;  border-bottom: 0.3em #cccccc solid;}
 #topnav nav li{display:inline;}
-#topnav nav li a{color: #ffffff; padding: 1em 2.5em 1em 2.5em;}
+#topnav nav li a{color: #ffffff; padding: 1em 1.5em 1em 1.5em;}
 #topnav a:hover {color: #ffffff; background-color: #547f86;}
 
 #content {
 	float: left;
-	margin: 0 20px 0 20px;
-	width: 70%;
+	margin: 0 2em;
+	width: 67%;
 	background-color: #ffffff;
 }
-#content h1{margin: 0px; font-size: 45px; border-bottom: 1px #777777 solid; padding: 20px 0; font-weight: normal;}
+#content h1{margin: 0; font-size: 2.5em; border-bottom: 0.1em #777777 solid; padding: 0.5em 0; font-weight: normal;}
 
 #newsdiv{
 	/*noch leer*/
 }
 
 div.news  {
-	font-size: 24px;
+	font-size: 1.2em;
 	color: #000000;
-	padding: 15px 8px;
+	padding: 0.5em 0em;
 	margin: 0px;
-	border-bottom: 1px solid #000000;
+	border-bottom: 0.1em solid #000000;
 }
-div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10px; margin-bottom: 10px;}
+div.news h2 {font-size: 1.5em; color:#000000; font-weight: normal; margin-top: 0.3em; margin-bottom: 0.7em;}
 
 #indexdate {
 	text-align: right;
-	margin: 0px;
+	margin: 0;
 	font-size: 0.6em;
 }
 
 #preview {
-	font-size: 0.6em;
+	font-size: 0.8em;
 }
 
 #indexsmileyarea {
-	margin: 10px 0 10px 0;
+	margin: 1em 0;
 }
 
-#indexsmileyarea span {margin-right: 10px}
+#indexsmileyarea span {margin-right: 1em}
 
 .preview_image {
-	width: 28px;
+	width: 3%;
 }
 
 .more_button {
@@ -154,10 +158,10 @@ div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10
 
 #rightside{
 	padding: 1em;
-	margin-left: 74%;
+	margin-left: 70%;
 	overflow: visible;
 }
-#rightside iframe {width: 90%; height: 15%; margin-bottom: 1.5em;}
+#rightside iframe {width: 80%; height: 15%; margin-bottom: 1.5em;}
 
 #footer {
 	clear:both;
@@ -168,7 +172,7 @@ div.news h2 {font-size: 28px; color:#000000; font-weight: normal; margin-top: 10
 #footer nav ul li   {float: left; color: #547f86; display:inline; }
 #footer nav li a{color: #547f86; margin-right: 1em;}
 
-#footer p {margin-left: 77%; color: #333333; }
+#footer p {margin-left: 77%; color: #333333; font-size: 1em;}
 footer nav p {display:inline;}
 
 
@@ -182,33 +186,33 @@ footer nav p {display:inline;}
 #article {
 	width: 100%;
 }
-#article h1{font-size: 2em; margin: 20px 20px 5px 20px; border-bottom: 1px #777777 solid; font-weight: normal;}
+#article h1{font-size: 2em; margin: 2em 0.5em 0.5em 0.5em; border-bottom: 0.1em #777777 solid; font-weight: normal;}
 
 #date{
-	margin: 0 20px 30px 20px;
+	margin: 0 2em 3em 2em;
 	text-align: right;
 }
 
 #textcontent{ 
 font-size: 1em;
-margin: 20px;
+margin: 1.5em;
 line-height: 150%;
 }
 
 #frage {
 	font-size: 1.5em;
-	margin: 20px 20px 0px 20px;
+	margin: 2em 2em 0 2em;
 }
 
 #smileyarea{
-	margin-bottom: 20px;
+	margin-bottom: 2em;
 }
 
 
 form.smiley {
 	text-align: center;
 	float: left;
-	margin: 15px 25px 15px 25px;
+	margin: 0.5em 1.5em;
 }
 
 .vote_image {
@@ -216,36 +220,36 @@ form.smiley {
 }
 
 .counter {
-	margin-left: 15px;
+	margin-left: 0.5em;
 	font-size: 2.5em;
 }
 
 .smileyunterschrift {
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 hr {
 	clear: both;
-	margin: 10px;
+	margin: 1em;
 	color: #8ab0b6;
 }
 
 #commentarea{
 	clear: both;
-	margin: 20px;
+	margin: 2em;
 }
 
 #commentarea h2 {
 	font-weight: normal;
 	font-size: 2em;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 div.comment{
 	font-size: 1em;
-	padding: 0 20px 0 20px;
-	margin: 30px 20px 30px 20px;
+	padding: 0 2em;
+	margin: 3em 2em;
 }
 
 .comment b {
@@ -254,32 +258,30 @@ div.comment{
 }
 
 #commenttext {
-	margin: 10px;
+	margin: 1em;
 }
 
-#commentform {
-	margin: 20px 0 20px 0;
-}
 
-#commentform td {font-size: 16px; vertical-align: top;}
+
+#commentform td {font-size: 1em; vertical-align: top;}
 
 
 
 .button {
-	padding: 8px 13px 8px 13px;
-	margin-left: 75px;
+	padding: 0.8em 1.2em;
+	margin-left: 5em;
 	background-color: #8ab0b6;
 	font-family:'PT Sans Narrow', sans-serif;
 	font-size: 1em;
 	color: #ffffff;
-	border: 0px;
+	border: 0;
 }
 .button:hover{background-color: #547f86;}
 
 /*Footer-Seiten-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #textarea {
-	padding: 20px;
+	padding: 2em;
 	font-size: 1em;
 	line-height: 150%;
 }
@@ -291,7 +293,7 @@ div.comment{
 }
 
 #bam {
-	width: 170px;
+	width: 19%;
 }
 
 /*More Content-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -299,8 +301,8 @@ div.comment{
 .all_loaded {
 	font-size: 1.5em;
 	color: #000000;
-	padding: 15px 8px;
-	margin: 0px;
+	padding: 1.5em 0.8em;
+	margin: 0;
 }
 
 /* Kanalradar-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -309,8 +311,8 @@ div.comment{
 	width: 100%;
 }
 .kanalprofil{
-	margin: 10px;
-	border: 1px solid #000000;
+	margin: 1em;
+	border: 0.1em solid #000000;
 }
 
 #left{
@@ -330,7 +332,18 @@ margin: 5px 15px 5px 5px;
 
 	margin: 5px;
 	}
+	
 #kanaltext h1 p{margin-left:5px;}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+	
+	#wrapper{
+		width: 100%;
+	}
+	
+	
+}
 
 
 
