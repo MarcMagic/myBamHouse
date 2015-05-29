@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>BamHouse</title>
+		<title>BamHouse - virale Trends</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Informationen rund um die deutsche Internetcommunity, sowie Virales in YouTube, Twitter, Instagram, Facebook, Vine und co.">
+ 		<meta name="keywords" content="Internet, YouTube, Twitter, Facebook, Hashtag, viral, trends, online, instagram, news, blogger, bamhouse">
 		<link rel="icon" href="http://www.bamhouse.de/images/favicon.ico" type="image/x-icon" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
@@ -10,12 +12,12 @@
 		<script type="text/javascript">
 			$(function() {
 				$('.more_button').live("click",function() {
-					var getId = $(this).attr("enraging");
+					var getId = $(this).attr("id");
 					if (getId) {
-						$("#load_more_"+getId).html('<img src="images/load_img.gif" style="padding: 10px 0 0 100px"/>');
+						$("#load_more_"+getId).html('<img src="images/load_img.gif alt="Ladebalken" title="Ladebalken" style="padding: 10px 0 0 100px"/>');
 						$.ajax({
 							type: "POST",
-							url: "more_content_enraging.php",
+							url: "more_content.php",
 							data: "getLastContentId="+ getId, 
 							cache: false,
 							success: function(html){
@@ -43,19 +45,24 @@
 
 		</script>
 	</head>
-
 	<body>
+	<script src="/cookiechoices.js"></script>
+	<script>
+	  document.addEventListener('DOMContentLoaded', function(event) {
+	    cookieChoices.showCookieConsentBar('Um eine Mehrfach-Bewertung der einzelnen Artikel zu verhindern speichern wir Cookies. Indem Sie fortfahren, stimmen Sie der Verwendung zu.',
+	      'Hinweis schließen');
+	  });
+	</script>
 	<?php
 		require_once('connect.php');
 		mysql_query("SET NAMES 'utf8'");
-		$query = mysql_query("SELECT * FROM `index` ORDER BY enraging DESC LIMIT 10");
-		
+		$query = mysql_query("SELECT * FROM `index` ORDER BY id DESC LIMIT 10");
 	?>
 		<div id="wrapper">
 			<div id="top">
 				<div id="logo">
-					<a href="index.php"><img src="images/Bamhouse.png"/></a>
-				</div>	
+					<a href="index.php"><img src="images/Bamhouse.png" alt ="BamHouse" title="BamHouse" /></a>
+				</div>
 				
 				<div id="top-right">
 				
@@ -99,55 +106,18 @@
 					</ul>
 				</nav>
 			</div>
-			<div id="content">	
-				<h1>Das Neueste aus dem Netz</h1>		
-						<div id = 'newsdiv'>
-						<?php
-						while ($row = mysql_fetch_assoc($query)) {
-							$id = $row['id'];
-							$headline = $row['headline'];
-							$text = $row['text'];
-							$cool = $row['cool'];
-							$sad = $row['sad'];
-							$enraging = $row['enraging'];
-							$funny = $row['funny'];
-							$date = $row['date'];
-
-							echo "<div class='news'>
-									<div id='indexdate'>{$date}</div>
-									<a href='news.php?id={$id}'>
-										<h2>{$headline}</h2>
-									</a>
-									<div id = preview>".substr($text,0,230).
-									"<a href='news.php?id={$id}'><b> ...weiterlesen</b></a></div>
-											<div id='indexsmileyarea'><img class='preview_image' src='images/cool.png'/>
-												<span>{$cool}</span>
-												<img class='preview_image' src='images/sad.png'/>
-												<span>{$sad}</span>
-												<img class='preview_image' src='images/enraging.png'/>
-												<span>{$enraging}</span>
-												<img class='preview_image' src='images/funny.png'/>
-												<span>{$funny}</span>
-											</div>
-									</div>";
-							}?>				
-						</div>
-							<div class="more_div">
-								<a href="#"><div id="load_more_<?php echo $enraging; ?>" class="more_tab">
-									<div class="more_button" enraging="<?php echo $enraging; ?>">Mehr Neuigkeiten laden</div>
-								</a></div>
-							</div>
-			</div>
 			
-			<div id="rightside">
+			
+			<div id="hits">
 				<h2>Youtube Hits</h2>
 				<?php
-				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 7");
+				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC");
 				while ($row = mysql_fetch_assoc($result)) {
 					$hitsquelle = $row['hitsquelle'];
 				echo "<iframe width='560' height='315' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
 				}
 				?>
+
 			</div>
 			
 			<div id="footer">
@@ -162,7 +132,6 @@
 				</nav>
 				
 				<p>&copy 2015 Copyright Bamhouse</p>
-
 			</div>
 		</div>
 	</body>

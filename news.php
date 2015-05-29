@@ -116,6 +116,10 @@
 				
 				</div>	
 				
+				<?php echo "<div style='font-size: 24px; margin: 20px;'>Das könnte dich auch interessieren: <a href='{$otherlink}' target='_self'>{$othertitle}</a></div>";?>
+				
+				<hr>
+				
 				<div id="frage">Wie findest du das?</div>
 				<div id="smileyarea">
 					
@@ -150,7 +154,7 @@
 
 					</div>
 				
-					<hr>
+					
 						
 
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -166,7 +170,25 @@
 								
 					<div id="commentarea">
 		    			<h2>Kommentare</h2>
-		    			<?php
+		    			
+	    				<form id= "commentform" action = "post.php" method = "post" target="_self">
+							<table>
+								<tr>
+									<td><input type="text" placeholder="Name" name="name" size="50" style="width: 200px;"/></td>
+									<td><input type="hidden" name="id" value="<?php echo $newsid;?>"/></td>
+									
+	    						</tr>
+	    						<tr>
+	    							<td><textarea cols= "50" rows = "3" placeholder = "Schreib deine Meinung..."name="comment"></textarea></td>
+									<td><input class="button" name="submit" type="submit" value="Kommentieren"/></td>
+								</tr>
+							
+							</table>
+	    				</form></br>
+						
+						
+						
+						<?php
 	    				$comchk = mysql_query("SELECT * FROM `comment` WHERE newsid = '{$articleid}' ORDER BY id DESC");
 	    				while ($comment = mysql_fetch_assoc($comchk)) {
 							$name = $comment['name'];
@@ -177,23 +199,10 @@
 							";
 						}
 	    				?>
-	    				<p>Sag uns was zu dazu denkst. Du musst dich nirgends einloggen um zu kommentieren, wir behalten uns allerdings vor unangemessene Kommentare zu entfernen.</p>
-	    				<form id= "commentform" action = "post.php" method = "post" target="_self">
-							<table>
-								<tr>
-									<td>Name: </td><td><input type="text" name="name" size="50" style="width: 200px;"/>
-									<input type="hidden" name="id" value="<?php echo $newsid;?>"/>
-									</td>
-	    						</tr>
-	    						<tr>
-	    							<td>Kommentar: </td><td><textarea cols= "50" rows = "8" name="comment"></textarea></td>
-	    						</tr>
-	    					</table>
-	    					<input class="button" name="submit" type="submit" value="Kommentieren"/>
-	    				</form></br>
+	    				
 	    			</div>
 
-	    			<?php echo "<div style='font-size: 24px; margin: 20px;'>Das könnte dich auch interessieren: <a href='{$otherlink}' target='_self'>{$othertitle}</a></div>";?>
+	    			
 		    		<div style="text-align:center;"><iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=bamh-21&o=3&p=48&l=ur1&category=de_piv&banner=00NJE46FJZ5AP106AQR2&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe></div>
 				
 				<div id="footer">

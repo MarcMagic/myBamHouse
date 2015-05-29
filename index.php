@@ -152,7 +152,7 @@
 			<div id="rightside">
 				<h2>Youtube Hits</h2>
 				<?php
-				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 5");
+				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 7");
 				while ($row = mysql_fetch_assoc($result)) {
 					$hitsquelle = $row['hitsquelle'];
 				echo "<iframe width='560' height='315' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
