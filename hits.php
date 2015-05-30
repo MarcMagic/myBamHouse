@@ -17,11 +17,11 @@
 						$("#load_more_"+getId).html('<img src="images/load_img.gif alt="Ladebalken" title="Ladebalken" style="padding: 10px 0 0 100px"/>');
 						$.ajax({
 							type: "POST",
-							url: "more_content.php",
+							url: "more_hits.php",
 							data: "getLastContentId="+ getId, 
 							cache: false,
 							success: function(html){
-								$("div#newsdiv").append(html);
+								$("div#hits").append(html);
 								$("#load_more_"+getId).remove();
 							}
 						});
@@ -56,7 +56,7 @@
 	<?php
 		require_once('connect.php');
 		mysql_query("SET NAMES 'utf8'");
-		$query = mysql_query("SELECT * FROM `index` ORDER BY id DESC LIMIT 10");
+		$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 9");
 	?>
 		<div id="wrapper">
 			<div id="top">
@@ -107,20 +107,29 @@
 				</nav>
 			</div>
 			
-			
+		<div id="allhits">
+		
 			<div id="hits">
 				<h2>Youtube Hits</h2>
 				<?php
-				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC");
 				while ($row = mysql_fetch_assoc($result)) {
 					$hitsquelle = $row['hitsquelle'];
-				echo "<iframe width='560' height='315' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
+				 echo "<iframe width='280' height='157' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
 				}
 				?>
 
 			</div>
 			
+			<div class="more_div">
+								<a href="#"><div id="load_more_<?php echo $id; ?>" class="more_tab">
+									<div class="more_button" id="<?php echo $id; ?>">Mehr YouTube Hits laden</div>
+								</a></div>
+			</div>
+			
+		</div>
+			
 			<div id="footer">
+			
 				<nav>
 					<ul>
 						<li><a href="impressum.html">Impressum</a></li>

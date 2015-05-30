@@ -40,7 +40,7 @@ body{
 /*Aufteilung index---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #wrapper {
-	width: 70%;
+	width: 960px;
 	margin: .8em auto;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 100px grey;
@@ -144,7 +144,7 @@ div.news h2 {font-size: 1.5em; color:#000000; font-weight: normal; margin-top: 0
 .more_button {
     background: none repeat scroll 0 0 #FFFFFF;
     /*border: 1px solid #000000;*/
-    border-radius: 0.5em;
+	margin: 0 0.5em;
 	background-color: #8ab0b6;
 	color: #ffffff;
     height: auto;
@@ -172,7 +172,7 @@ div.news h2 {font-size: 1.5em; color:#000000; font-weight: normal; margin-top: 0
 #footer nav ul li   {float: left; color: #547f86; display:inline; }
 #footer nav li a{color: #547f86; margin-right: 1em;}
 
-#footer p {margin-left: 77%; color: #333333; font-size: 1em;}
+#footer p {margin-left: 77%; color: #333333; font-size: 0.7em;}
 footer nav p {display:inline;}
 
 
@@ -201,7 +201,7 @@ line-height: 150%;
 
 #frage {
 	font-size: 1.5em;
-	margin: 2em 2em 1em 1em;
+	margin: 1em 1em 1em 2em;
 }
 
 #smileyarea{
@@ -248,13 +248,20 @@ hr {
 
 #commentform td {font-size: 1em; vertical-align: top;}
 
+input[type="text"]{
+	font-size: 1.5em;
+}
+
+textarea{
+	font-size: 1.5em;
+}
 
 
 .button {
 	padding: 0.9em 1.2em;
 	background-color: #8ab0b6;
 	font-family:'PT Sans Narrow', sans-serif;
-	font-size: 1em;
+	font-size: 1.5em;
 	color: #ffffff;
 	border: 0;
 }
@@ -306,6 +313,25 @@ textarea.comment {
 	padding: 1.5em 0.8em;
 	margin: 0;
 }
+
+/*-Youtube Hits-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#hits{
+	padding: 1em;
+}
+#hits iframe{margin: 0.5em;}
+#hits h2{margin: 0.5em;}
+
+.hit{
+
+
+
+
+}
+
+
+
+
 
 /* Kanalradar-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
