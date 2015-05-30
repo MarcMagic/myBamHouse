@@ -157,16 +157,7 @@
 					
 						
 
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-								<!-- nexttosmileys -->
-								<ins class="adsbygoogle"
-								     style="display:block"
-								     data-ad-client="ca-pub-3972698499720775"
-								     data-ad-slot="2183936841"
-								     data-ad-format="auto"></ins>
-								<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-								</script>
+						
 								
 					<div id="commentarea">
 		    			<h2>Kommentare</h2>
@@ -203,7 +194,16 @@
 	    			</div>
 
 	    			
-		    		<div style="text-align:center;"><iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=bamh-21&o=3&p=48&l=ur1&category=de_piv&banner=00NJE46FJZ5AP106AQR2&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe></div>
+		    		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+								<!-- nexttosmileys -->
+								<ins class="adsbygoogle"
+								     style="display:block"
+								     data-ad-client="ca-pub-3972698499720775"
+								     data-ad-slot="2183936841"
+								     data-ad-format="auto"></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
 				
 				<div id="footer">
 					<nav>
