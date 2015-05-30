@@ -3,7 +3,7 @@ include "connect.php";
 mysql_query("SET NAMES 'utf8'");
 if(isSet($_POST['getLastHitsId'])) {
 	$getLastHitsId=$_POST['getLastHitsId'];
-	$result=mysql_query("SELECT * FROM `hits` WHERE id <'$getLastHitsId' ORDER BY id DESC LIMIT 3");
+	$result=mysql_query("SELECT * FROM `hits` WHERE id <'$getLastHitsId' ORDER BY id DESC LIMIT 12");
 	$count=mysql_num_rows($result);
 	if($count>0){
 		while ($row = mysql_fetch_assoc($result)) {

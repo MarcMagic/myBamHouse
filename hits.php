@@ -56,7 +56,7 @@
 	<?php
 		require_once('connect.php');
 		mysql_query("SET NAMES 'utf8'");
-		$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 9");
+		$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 12");
 	?>
 		<div id="wrapper">
 			<div id="top">
