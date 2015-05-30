@@ -133,7 +133,7 @@
 												<span>{$cool}</span>
 												<img class='preview_image' src='images/sad.png' alt ='smiley traurig' title='traurig'/>
 												<span>{$sad}</span>
-												<img class='preview_image' src='images/enraging.png' alt ='smiley verärgenrd' title='verärgernd'/>
+												<img class='preview_image' src='images/enraging.png' alt ='smiley verärgernd' title='verärgernd'/>
 												<span>{$enraging}</span>
 												<img class='preview_image' src='images/funny.png' alt ='smiley lustig' title='lustig'/>
 												<span>{$funny}</span>
@@ -150,7 +150,7 @@
 			</div>
 			
 			<div id="rightside">
-				<h2>Youtube Hits</h2>
+				<a href="hits.php"><h2>Youtube Hits</h2></a>
 				<?php
 				$result = mysql_query("SELECT * FROM `hits` ORDER BY id DESC LIMIT 7");
 				while ($row = mysql_fetch_assoc($result)) {

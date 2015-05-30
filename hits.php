@@ -18,7 +18,7 @@
 						$.ajax({
 							type: "POST",
 							url: "more_hits.php",
-							data: "getLastContentId="+ getId, 
+							data: "getLastHitsId="+ getId, 
 							cache: false,
 							success: function(html){
 								$("div#hits").append(html);
@@ -113,6 +113,7 @@
 				<h2>Youtube Hits</h2>
 				<?php
 				while ($row = mysql_fetch_assoc($result)) {
+					$id = $row['id'];
 					$hitsquelle = $row['hitsquelle'];
 				 echo "<iframe width='280' height='157' src='{$hitsquelle}' frameborder='0' allowfullscreen></iframe>";
 				}
