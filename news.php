@@ -205,6 +205,34 @@
 								(adsbygoogle = window.adsbygoogle || []).push({});
 								</script>
 				
+				<div id="miniindex">
+				
+					<?php
+						require_once('connect.php');
+						mysql_query("SET NAMES 'utf8'");
+						$query = mysql_query("SELECT * FROM `index` ORDER BY id DESC LIMIT 5");
+					
+					while ($row = mysql_fetch_assoc($query)) {
+							$id = $row['id'];
+							$headline = $row['headline'];
+							
+							
+							
+							echo "
+							<div class='mininews'>
+									<a href='news.php?id={$id}'>
+										<h2>{$headline}</h2>
+									</a>
+									
+											
+							</div>";
+							}?>	
+							
+				</div>
+				
+				
+				
+				
 				<div id="footer">
 					<nav>
 						<ul>
