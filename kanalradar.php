@@ -106,17 +106,20 @@
 						
 						<div id="left">
 							<div id="kanalpic">
-								<p><?php echo "<img src='images/{$kanalpic}.png' alt='{$kanalpic}' title='{$kanalpic}'"; ?></p>
+								<p><?php echo "<img src='images/{$kanalpic}.jpg' alt='{$kanalpic}' title='{$kanalpic}'"; ?></p>
+							</div>
+							
+							<div id="kanallink">
+								<?php echo "<h1><a href ='{$kanallink}' target='_blank'>{$kanalname}</a></h1>"; ?>
 							</div>
 							
 							<div id="kanaltext">
-								<?php echo "<h1><a href ='{$kanallink}'>{$kanalname}</a></h1>"; ?>
 								<p><?php echo "{$beschreibung}";?></p>
 							</div>
 						</div>
 						
 						<div id="kanalvid">
-							<p><?php echo "<iframe width='560' height='315' src='{$kanalvid}' frameborder='0' allowfullscreen></iframe>"; ?></p>
+							<p><?php echo "<iframe width='450' height='315' src='{$kanalvid}' frameborder='0' allowfullscreen></iframe>"; ?></p>
 						</div>
 					</div>
 			<?php

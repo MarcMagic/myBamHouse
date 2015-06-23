@@ -100,6 +100,11 @@ body{
 #topnav nav li a{color: #ffffff; padding: 1em 1.5em 1em 1.5em;}
 #topnav a:hover {color: #ffffff; background-color: #547f86;}
 
+#radarlink {
+	float:right;
+
+}
+
 #content {
 	float: left;
 	margin: 0 2em;
@@ -349,18 +354,19 @@ textarea.comment {
 
 #left{
 float:left;
-width:300px;
+width:450px;
 }
 
 #kanalpic p img{
 height: 100px;
 
-margin: 5px 15px 5px 5px;
+margin: 5px 15px 0px 5px;
+float:left;
 }
 
 
 #kanaltext{
-	height: 100px;
+	height: 150px;
 
 	margin: 5px;
 	}
